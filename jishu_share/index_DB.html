@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+
+         .container-fluid ul li{list-style: none;padding-left: 20px;}
+         .container-fluid ul li:hover{display: block;background-color: gray;}
+
+         .top{height: 1.2em;background-color: gray;}
+         .navbar-default .navbar-nav > li > a:hover
+       {
+          color: white;
+       }
+       .navbar-default .navbar-nav > li > a:focus {
+       	  color:blue;
+        }
+        .navbar-header a img{position: relative;left: 10px;top:10px;}
+        .navbar-nav li{position: relative;top: 8px;}
+        .carousel{position: relative;width: 28%;left: 10%;height: 250px;margin-top: 20px;}
+        .content{position: absolute;top: 16.2%;left: 38%;}
+        .text01{width: 35%;height: 130px;border: solid 1px #ccc;}
+        .text02{width: 35%;height: 120px;border: solid 1px #ccc;}
+        .r_box{position: absolute;top: 16.2%;left: 58%;}
+     /*   .guanzhu .img a img{width: 30%;height: 45%;position: relative;right: 5%;}*/
+       
+        .list li{list-style: none;}
+        .list-inline li a img{width:80px;height: 80px;}
+        .list-inline li a span{padding-left: 25px;padding-right: 1px;}
+        .list-inline li a{text-decoration: none;} 
+        .list-inline .yqlk .lk1 ul li a{text-decoration: none;}
+        .wz ul li a{text-decoration: none;}
+         hr{width: 1%;padding-right: 100%;}
+         h3{font-size: 15px;}
+         .lk1{background-color: white;}
+         body{background-color: #F1FAF9;}
+         .r_box_1{position:absolute;left: 10%;margin-top: 20px;}
+         .r_box_1 h3{font-weight: bold;}
+         .r_box_1 hr{height: 3px;border:none;border-top: 3px double red;width: 3px;}
+         figure a img{width: 30%;height: 50%;}
+         /*.c1 .image a img{} */
+         .r_box_1 .title{position: absolute;top: 80px;left: 220px;}
+         .r_box_1 .title ul li a{color: black;font-size: 15px;}
+         .r_box_1{width: 575px;height: 207px;}
+         .c1{ margin-bottom: 40px;height: 55%;}
+         .title ul {position: relative;top: -16px;left: -70px;}
+         .title1{position: relative;top:-132px;margin-left: 25%;}
+         .title2{position: relative;top:-142px;margin-left: 25%;}
+         .title3{position: relative;top:-128px;margin-left: 25%;}
+         .title4{position: relative;top:-120px;margin-left: 25%;}
+         .title5{position: relative;top:-130px;margin-left: 25%;}
+         .yr{width: 30%;height:100px;}
+         .people{width: 30%;height:110px;}
+         footer .end{height: 50px;background-color: black;position: relative;top: 2700px;}
+         .end ul li{list-style: none;}
+         .end ul li a{text-decoration: none;color: white;}
+         .end {text-align: center;}
+         .navbar-default{background-color: #D8D8D8;}
+         .sb{padding-left: 10px;}
+         .r_box{width: 800px;height: 800px;position: relative;left: 13%;}
+         .top_news h3 span{padding:0px 6px; }
+
+         .c{border: solid 2px gray;height: auto;margin-top: 10px;border-radius: 4px;background-color: #F7F7CC;}
+        /* .c:hover{background-color: white;}*/
+         .c ul li{list-style: none;} 
+         .c ul .data {padding-top: 25px;}
+         .r_box{margin-top: 20px;}
+         .r_box1{height: 200px;  position: relative;top: -10%;width: 25%;left:1005px;top: -820px;}
+         .box{height: 150px;position: relative;top: 50px;}
+         .box_1{border: solid 1px #FFDBA8;text-align: center;height: 75px;width: 33%;text-align: center;padding:22px;margin: 1px;}
+         .box_2{border: solid 1px #FFEF71;text-align: center;height: 75px;width: 33%;position: relative;left: 68%;top: -52%;text-align: center;padding:22px;margin: 1px;}
+         .box_3{border: solid 1px #B8FFF9;text-align: center;height: 75px;width: 33%;position: relative;left: 34%;top: -103%;text-align: center;padding:22px;margin: 1px;}
+         .box_4{border: solid 1px #99FF7F;text-align: center;height: 75px;width: 33%;position: relative;top: -105%;text-align: center;padding:22px;margin: 1px;}
+         .box_5{border: solid 1px #C560C0;text-align: center;height: 75px;width: 33%;position: relative;top: -156%;left: 34%;text-align: center;padding:22px;margin: 1px;}
+         .box_6{border: solid 1px #66B9FF;text-align: center;height: 75px;width: 33%;position: relative;top: -207%;
+         	left:68%;padding:22px;margin: 1px; }
+         .box_1 a{text-decoration: none;color:black;}
+         .box_2 a{text-decoration: none;color:black;}
+         .box_3 a{text-decoration: none;color:black;}
+         .box_4 a{text-decoration: none;color:black;}
+         .box_5 a{text-decoration: none;color:black;}
+         .box_6 a{text-decoration: none;color:black;}
+         .lk{width: 300px;position: relative;left: 1005px;top: -800px;}
+         .wz ul{position: relative;left: -25px;}
+         /*article{border: solid 2px gray;}*/
+        /*旋转效果*/
+         .box_1 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_1 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_2 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_2 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_3 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_3 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_4 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_4 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_5 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_5 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_6 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_6 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+.glyphicon {
+  padding: 0px 10px;
+}
+pre{background-color:#F7F7CC;border: none; }
+.sm{margin-top: 15px;height: auto;background-color: #F0F0F0;border: solid 2px #F7F7CC;}
+.fx{height: auto;margin-top: 10px;}
+.xyp{height: auto;margin-top: 20px;}
+.xyp ul li a:hover{color: black;}
+   </style>
+</head>
+<body>
+	<header>
+      <nav class="nav navbar-default" role="navigation">
+             <div class="top"></div>
+         <div class="container-fluid">
+         	<div class="navbar-header">
+                <a class="navbar-left" href="#"><img src="images/logo.png"></a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                  <span class="sr-only" >切换</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+         	</div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                 <li class="item"><a href="../index.html">首页</a></li>
+                 <li class="item active"><a href="../index_01.html">心情随笔</a></li>
+                 <li class="item"><a href="../index_02.html">韶华追忆</a></li>
+                 <li class="item"><a href="../index_03.html">技术分享</a></li>
+                 <li class="item"><a href="../index_04.html">学无止境</a></li>
+                 <li class="item"><a href="../index_05.html">关于我</a></li>
+              </ul>
+             <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                </div>
+                     <button type="submit" class="btn navbar-btn">搜索</button>
+             </form>
+
+           </div>
+         </div>
+      </nav>
+	</header>
+	<article>
+          <div class="r_box">
+               <div class="top_news ">
+                   <h3>
+                    <span ><b style="font-size: 16px">您现在的位置是：</b></span>
+                   	<span ><a href="../index.html" style="color: black">首页></a></span>
+                    <span ><a href="../index_03.html" style="color: black">技术分享>></a></span>
+                   </h3>
+                   <hr style="height: 0px;border: none;border-top: 4px ridge red;">
+               </div>
+                <div class="c">
+                  <ul>
+                     <li><h2 style="font-size: 20px;">DB类基本操作</h2></li>
+                     <li class="glyphicon glyphicon-user">邵建欣</li>
+                     <li class="glyphicon glyphicon-calendar">2017-11-08 16:52:00</li>
+                     <li><p style="padding: 10px 0px;">[注明：]闲暇时写的一个DB类，主要是最基础的CURD操作，还可以自行做一些扩展。我只写得是一些基本的用法，封装一些常用的方法，逻辑性比较强的业务还得在日后练习中加强。下面的方法，我已作相应的测试。</p></li>
+                     <li><p style="padding: 10px 0px;">db.config.php db配置文件</p></li>
+
+                     <li><pre style="padding: 10px 0px;"><?php
+02
+/**
+03
+ * 数据库配置信息
+04
+ * db.config.php
+05
+ * @author   lei.hongye@xcar.com.cn
+06
+ * @copyright  Copyright 2015
+07
+ */
+08
+define('DB_HOST', 'localhost');//数据库地址
+09
+define('DB_USER', 'root');//数据库用户名
+10
+define('DB_PWD', '');//数据库密码
+11
+define('DB_NAME', 'message');//数据库名
+12
+define('DB_CHARSET', 'gbk');//数据库字符码
+13
+define('TIMEZONE', 'PRC');//数据库时区设置
+db.class.php db类操作方法
+
+查看代码打印?
+<?php
+/**
+ * DB类【主要操作数据库增删改查】
+ * ==============================================
+ * 版权所有 2010-2015
+ * ----------------------------------------------
+ * 这不是一个自由软件，未经授权不许任何使用和传播。
+ * ==============================================
+ * @date: 2015-12-25
+ * @author: lei.hongye
+ * @desc:此类只是空闲时候写得一些简单的DB操作
+ */
+require_once './db.config.php';
+date_default_timezone_set(TIMEZONE);//设置时区
+class DB{
+    private $db_host;//数据库地址
+    private $db_user;//数据库用户名
+    private $db_pwd;//数据库密码
+    private $db_port;//数据库端口号
+    private $db_name;//数据库名
+    private $db_table;//数据库表名
+    private $db_connect_link;//数据库连接
+     
+    /**
+     * db类的构造函数
+     * Enter description here ...
+     *
+     */
+    public function __construct($db_host=DB_HOST,$db_user=DB_USER,$db_pwd=DB_PWD,$db_name=DB_NAME,$db_port='3306')
+    {
+        $this->db_host = $db_host;
+        $this->db_user = $db_user;
+        $this->db_pwd =  $db_pwd;
+        $this->db_name = $db_name;
+        $this->db_port = $db_port;
+    }
+    /**
+     * @todo 打开数据库连接
+     * Enter description here ...
+     */
+    private function db_connect()
+    {
+        $this->db_connect_link = mysql_connect($this->db_host,$this->db_user,$this->db_pwd);
+        mysql_select_db($this->db_name);
+        mysql_query('set names gbk');
+    }
+     
+    /**
+     * @todo 关闭数据库连接
+     * Enter description here ...
+     */
+    private function db_close()
+    {
+        mysql_close($this->db_connect_link);
+    }
+     
+    /**
+     * @todo 通过sql执行语句
+     * Enter description here ...
+     */
+    public function get_sql_data($sql){
+        $this->db_connect();
+        $data_list = array();
+        $res = mysql_query($sql,$this->db_connect_link);
+        while ($obj = mysql_fetch_assoc($res))
+        {
+            if ($obj){
+                $data_list[] = $obj;
+            }
+        }
+        $this->db_close();
+        return $data_list;
+    }
+    /**
+     * @todo 数据库添加数据
+     * @param $table 表名
+     * @param $data array()
+     */
+    public function insertData($table,$data)
+    {
+081
+        if(empty($table)){ die('INSERT Empty TableName!');}
+         if(empty($data)){ die('INSERT '.$tableName.' Empty Data');}
+         $sql = '';
+         $sql = "insert into {$table}";
+         $addsql = $this->parseArray($data);
+     if(!empty($addsql)){
+            $this->db_connect();
+            $this->query($sql.$addsql);
+            $insertid = mysql_insert_id($this->db_connect_link);
+            return $insertid;
+            $this->db_close();
+         }else{
+            mysql_errno();
+         }
+    }
+     
+    /**
+     * @todo 数据库删除数据
+ * @author tianzhukui@126.com
+     * @param $where array() where条件
+     */
+    public function delData($table,$where)
+    {
+        if (empty($table)){ die('Delete Empty TalbeName');}
+        if (empty($where)){
+            die('参数不正确');
+        }else {
+            $sql = "DELETE FROM {$table} WHERE 1";
+            if (is_array($where)){
+                foreach ($where as $k=>$v) {
+                    $sql .= " AND {$k} = '{$v}'";
+                }
+            }elseif (is_string($where)){
+                $sql .= ' AND '. $where;
+            }
+             
+        }
+        return $this->query($sql);
+    }
+     
+    /**
+     * @todo 数据库更新数据
+     * @param $table 表名
+     * @param $data 操作的数据
+     * @param $where 更新条件
+     */
+    public function updateDate($table,$data,$where)
+    {
+        if (empty($table)){die('Update Empty TableName');}
+        if (!is_array($data)){die('插入数据格式错误');}
+        $sql = "UPDATE {$table} SET ";
+        foreach ($data as $k=>$v){
+            $sql .= "{$k} = '$v',";
+        }
+        $sql = rtrim($sql,',');
+        $sql .= "WHERE 1 AND ";
+        if (is_array($where)){
+            foreach ($where as $k=>$v){
+                $sql .= " {$k} = '$v' AND ";
+            }
+            $sql = rtrim($sql,',');
+        }elseif (is_string($where)){
+        $sql .= $where;
+        }
+        return $this->query($sql);
+                  
+    }
+     
+    /**
+     * @todo 解析数据:转义字符
+     *
+     */
+    public function parseData($value)
+    {
+        if (is_string($value))
+        {
+            $value = addslashes($value);
+        }elseif (is_array($value))
+        {
+            $value = array_map(array($this,'parseValue'), $value);
+        }elseif (is_bool($value))
+        {
+            $value = !empty($value) ? '0' : '1';
+        }elseif (is_null($value))
+        {
+            $value = 'null';
+        }
+        return $value;
+    }
+     
+    /**
+     * @todo解析数组：生成sql
+     * $type true:添加 false:update
+     */
+    public function parseArray($value=array(),$type='TRUE')
+    {
+        $sql = '';
+        if (is_array($value))
+        {
+            if ($type){
+                $data = array();
+                $keys = join('`,`', array_keys($value));//获得数据的key值
+                $key_str = "(`".$keys."`)";
+                $sql .= $key_str." VALUES ";
+                foreach ($value as $k=>$V){
+                    $data [] = "'".$this->parseData($V)."'";
+                }
+                $new_data = join(',', $data);//将所得到的value值用逗号连接起来
+                $sql.= "(".$new_data.")";
+            }else{
+                $sql = "set ";
+                foreach ($value as $k=>$v){
+                    $sql .= "`{$k}`='".$this->parseData($V)."' ,";
+                }
+                $sql = rtrim($sql,',');
+196
+            }
+             
+        }
+        return $sql;
+    }
+     
+    /**
+     * @todo 执行update
+     * @author lhy
+     */
+    public function query($sql) {
+        $this->db_connect();
+        $res = mysql_query($sql,$this->db_connect_link);
+        return $res;
+    }
+     
+     
+     
+}
+
+</pre></li>
+                  </ul>
+               </div>
+               <div class="sm">
+                  <ul>
+                     <li>版权声明：本站原创文章，于2017-11-08，由<a>本人</a>发表</li>
+                     <li>转载请注明：<a href="#">DB类基本操作</a>|<a href="../index.html">个人博客</a></li>
+                  </ul>
+               </div>
+               <div style="text-align: center;margin-top: 20px;" class="ds">
+                   <button style="border-radius: 20px; padding: 10px 40px;" class="btn btn-primary btn-lg " type="button">打赏</button>
+               </div>
+              <div class="fx">
+                      <ul class="list-inline">
+                          <li>分享:</li>
+                          <li><a href="#"><img style="width: 78px;height: 48px;" src="images/wx.gif"></a></li>
+                          <li><a href="#"><img style="width: 48px;height: 48px;" src="images/xl.jpg"></a></li>
+                          <li><a href="#"><img style="width: 78px;height: 48px;" src="images/qq.jpg"></a></li>
+                      </ul>
+              </div>
+              <div class="xyp">
+                  <ul class="list-inline">
+                     <li><b>下一篇：</b></li>
+                     <li><a href="index_dt.html">冬天来了</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="r_box1">
+                <div class="box">
+                    <div class="box_1">
+                        <div><a href="#">关于博主</a></div>
+                    </div>
+                     <div class="box_2">
+                     	  <div><a href="#">心情随笔</a></div>
+                    </div>
+                     <div class="box_3">
+                     	  <div><a href="#">韶华追忆</a></div>
+                    </div>
+                     <div class="box_4">
+                     	  <div><a href="#">网站首页</a></div>
+                    </div>
+                     <div class="box_5">
+                     	  <div><a href="#">博客留言</a></div>
+                    </div>
+                     <div class="box_6">
+                     	  <div><a href="#">叶子书屋</a></div>
+                    </div>
+                </div>
+
+          </div>
+
+         <div class="lk">
+               <h3>最新文章</h3>
+               <hr>
+               <div class="wz">
+                   <ul>
+                      <li><a href="#">王先森生日快乐</a></li>
+                      <li><a href="#">不要把自己的苦难看得过于独特</a></li>
+                      <li><a href="#">曾梦想仗剑走天涯，后来因为bug太多就没去</a></li>
+                      <li><a href="#">天寒地冻，记得穿秋裤</a></li>
+                      <li><a href="#">我有那么一帮傻姑娘</a></li>
+                      <li><a href="#">php面试题总结（一）</a></li>
+                   </ul>
+
+               </div>
+               <div class="yqlk">
+                   <h3>友情链接</h3>
+                   <hr>
+                   <div class="lk1">
+                      <ul class="list-inline">
+                         <li><a href="#">zhjx922博客</a></li>
+                         <li><a href="#">PHP学习网</a></li>
+                         <li><a href="#">王志军博客</a></li>
+                      </ul>
+                      <ul class="list-inline">
+                         <li><a href="#">KTWO博客</a></li>
+                         <li><a href="#">80乐</a></li>
+                         <li><a href="#">张伟森博客</a></li>
+                         <li><a href="#">Leftso(左搜)</a></li>
+                         
+                      </ul>
+                        <ul class="list-inline">
+                        <li><a href="#">封尘博客</a></li>
+                        </ul>	
+                   </div>
+                
+               </div>
+           </div>
+
+	</article>
+	<footer>
+        <div class="end">
+           <ul>
+               <li><a href="#">Copyright © 2017</a></li>
+               <li><a href="#">www.yezismile.com All rights reserved. 京ICP备15029736号-1</a></li>
+           </ul>
+        </div>
+	</footer>
+	  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+
+         .container-fluid ul li{list-style: none;padding-left: 20px;}
+         .container-fluid ul li:hover{display: block;background-color: gray;}
+
+         .top{height: 1.2em;background-color: gray;}
+         .navbar-default .navbar-nav > li > a:hover
+       {
+          color: white;
+       }
+       .navbar-default .navbar-nav > li > a:focus {
+       	  color:blue;
+        }
+        .navbar-header a img{position: relative;left: 10px;top:10px;}
+        .navbar-nav li{position: relative;top: 8px;}
+        .carousel{position: relative;width: 28%;left: 10%;height: 250px;margin-top: 20px;}
+        .content{position: absolute;top: 16.2%;left: 38%;}
+        .text01{width: 35%;height: 130px;border: solid 1px #ccc;}
+        .text02{width: 35%;height: 120px;border: solid 1px #ccc;}
+        .r_box{position: absolute;top: 16.2%;left: 58%;}
+     /*   .guanzhu .img a img{width: 30%;height: 45%;position: relative;right: 5%;}*/
+       
+        .list li{list-style: none;}
+        .list-inline li a img{width:80px;height: 80px;}
+        .list-inline li a span{padding-left: 25px;padding-right: 1px;}
+        .list-inline li a{text-decoration: none;} 
+        .list-inline .yqlk .lk1 ul li a{text-decoration: none;}
+        .wz ul li a{text-decoration: none;}
+         hr{width: 1%;padding-right: 100%;}
+         h3{font-size: 15px;}
+         .lk1{background-color: white;}
+         body{background-color: #F1FAF9;}
+         .r_box_1{position:absolute;left: 10%;margin-top: 20px;}
+         .r_box_1 h3{font-weight: bold;}
+         .r_box_1 hr{height: 3px;border:none;border-top: 3px double red;width: 3px;}
+         figure a img{width: 30%;height: 50%;}
+         /*.c1 .image a img{} */
+         .r_box_1 .title{position: absolute;top: 80px;left: 220px;}
+         .r_box_1 .title ul li a{color: black;font-size: 15px;}
+         .r_box_1{width: 575px;height: 207px;}
+         .c1{ margin-bottom: 40px;height: 55%;}
+         .title ul {position: relative;top: -16px;left: -70px;}
+         .title1{position: relative;top:-132px;margin-left: 25%;}
+         .title2{position: relative;top:-142px;margin-left: 25%;}
+         .title3{position: relative;top:-128px;margin-left: 25%;}
+         .title4{position: relative;top:-120px;margin-left: 25%;}
+         .title5{position: relative;top:-130px;margin-left: 25%;}
+         .yr{width: 30%;height:100px;}
+         .people{width: 30%;height:110px;}
+         footer .end{height: 50px;background-color: black;position: relative;top: 200px;}
+         .end ul li{list-style: none;}
+         .end ul li a{text-decoration: none;color: white;}
+         .end {text-align: center;}
+         .navbar-default{background-color: #D8D8D8;}
+         .sb{padding-left: 10px;}
+         .r_box{width: 800px;height: 800px;position: relative;left: 13%;}
+         .top_news h3 span{padding:0px 6px; }
+
+         .c{border: solid 2px gray;height: auto;margin-top: 10px;border-radius: 4px;background-color: #F7F7CC;}
+        /* .c:hover{background-color: white;}*/
+         .c ul li{list-style: none;} 
+         .c ul .data {padding-top: 25px;}
+         .r_box{margin-top: 20px;}
+         .r_box1{height: 200px;  position: relative;top: -10%;width: 25%;left:1005px;top: -820px;}
+         .box{height: 150px;position: relative;top: 50px;}
+         .box_1{border: solid 1px #FFDBA8;text-align: center;height: 75px;width: 33%;text-align: center;padding:22px;margin: 1px;}
+         .box_2{border: solid 1px #FFEF71;text-align: center;height: 75px;width: 33%;position: relative;left: 68%;top: -52%;text-align: center;padding:22px;margin: 1px;}
+         .box_3{border: solid 1px #B8FFF9;text-align: center;height: 75px;width: 33%;position: relative;left: 34%;top: -103%;text-align: center;padding:22px;margin: 1px;}
+         .box_4{border: solid 1px #99FF7F;text-align: center;height: 75px;width: 33%;position: relative;top: -105%;text-align: center;padding:22px;margin: 1px;}
+         .box_5{border: solid 1px #C560C0;text-align: center;height: 75px;width: 33%;position: relative;top: -156%;left: 34%;text-align: center;padding:22px;margin: 1px;}
+         .box_6{border: solid 1px #66B9FF;text-align: center;height: 75px;width: 33%;position: relative;top: -207%;
+         	left:68%;padding:22px;margin: 1px; }
+         .box_1 a{text-decoration: none;color:black;}
+         .box_2 a{text-decoration: none;color:black;}
+         .box_3 a{text-decoration: none;color:black;}
+         .box_4 a{text-decoration: none;color:black;}
+         .box_5 a{text-decoration: none;color:black;}
+         .box_6 a{text-decoration: none;color:black;}
+         .lk{width: 300px;position: relative;left: 1005px;top: -800px;}
+         .wz ul{position: relative;left: -25px;}
+         /*article{border: solid 2px gray;}*/
+        /*旋转效果*/
+         .box_1 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_1 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_2 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_2 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_3 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_3 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_4 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_4 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_5 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_5 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_6 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_6 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+.glyphicon {
+  padding: 0px 10px;
+}
+pre{background-color:#F7F7CC;border: none; }
+.sm{margin-top: 15px;height: auto;background-color: #F0F0F0;border: solid 2px #F7F7CC;}
+.fx{height: auto;margin-top: 10px;}
+.xyp{height: auto;margin-top: 20px;}
+.xyp ul li a:hover{color: black;}
+   </style>
+</head>
+<body>
+	<header>
+      <nav class="nav navbar-default" role="navigation">
+             <div class="top"></div>
+         <div class="container-fluid">
+         	<div class="navbar-header">
+                <a class="navbar-left" href="#"><img src="images/logo.png"></a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                  <span class="sr-only" >切换</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+         	</div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                 <li class="item"><a href="../index.html">首页</a></li>
+                 <li class="item active"><a href="../index_01.html">心情随笔</a></li>
+                 <li class="item"><a href="../index_02.html">韶华追忆</a></li>
+                 <li class="item"><a href="../index_03.html">技术分享</a></li>
+                 <li class="item"><a href="../index_04.html">学无止境</a></li>
+                 <li class="item"><a href="../index_05.html">关于我</a></li>
+              </ul>
+             <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                </div>
+                     <button type="submit" class="btn navbar-btn">搜索</button>
+             </form>
+
+           </div>
+         </div>
+      </nav>
+	</header>
+	<article>
+          <div class="r_box">
+               <div class="top_news ">
+                   <h3>
+                    <span ><b style="font-size: 16px">您现在的位置是：</b></span>
+                   	<span ><a href="../index.html" style="color: black">首页></a></span>
+                    <span ><a href="../index_03.html" style="color: black">技术分享>></a></span>
+                   </h3>
+                   <hr style="height: 0px;border: none;border-top: 4px ridge red;">
+               </div>
+                <div class="c">
+                  <ul>
+                     <li><h2 style="font-size: 20px;">phpqrcode生成二维码</h2></li>
+                     <li class="glyphicon glyphicon-user">邵建欣</li>
+                     <li class="glyphicon glyphicon-calendar">2017-11-08 16:52:00</li>
+                     <li><p style="padding: 10px 0px;font-weight: bold;">1、概念</p></li>
+                     <li><p style="padding: 10px 0px;">QR Code码，是由Denso公司于1994年9月研制的一种矩阵二维码符号，它具有一维条码及其它二维条码所具有的信息容量大、可靠性高、可表示汉字及图象多种文字信息、保密防伪性强等优点。</p></li>
+                     <li><p style="padding: 10px 0px;font-weight: bold;">2、应用</p></li>
+                     <li><p style="padding: 10px 0px;">一款小插件，主要用于PC端URL生成二维码。如微信分享等</p></li>
+                     <li><p style="padding: 10px 0px;font-weight: bold;">3、项目应用</p></li>
+                     <li><p style="padding: 10px 0px;">现在主要是php类库，在官网下载<a href="https://sourceforge.net/projects/phpqrcode/">https://sourceforge.net/projects/phpqrcode/</a>最新版本，解压到可访问的web目录下。只需对应的文件引入qrlib.php，如代码所示</p></li>
+                     <li><pre style="padding: 10px 0px;">require_once 'phpqrcode/qrlib.php';
+class QrcodeController
+{
+    const DEFAULT_URL = 'http://www.test.com';
+ 
+    public function  index() {
+        //获取
+        $url = $this->_request->getParam('url');
+        $url = empty($url) ? $url : self::DEFAULT_URL;
+        QRcode::png($url, false, 'H', 3, 2);
+    }
+}
+
+</pre></li>
+                     <li><p style="padding: 10px 0px;font-weight: bold;">4、参数介绍</p></li>
+                     <li><p style="padding: 10px 0px;">第一个参数$text,就是代码里的URL网址参数</p></li>
+                     <li><p style="padding: 10px 0px;">第二个参数$outfile，默认是false，不生成文件，只将二维码图片返回，不然需要给出存放生成二维码图片的路径</p></li>
+                     <li><p style="padding: 10px 0px;">第三个参数$level,默认是L，这个参数控制容错率，不同参数表示二维码被覆盖的区域百分比不同。</p></li>
+                                       <li><pre style="padding: 10px 0px;">
+$level
+QR_ECLEVEL
+区域百分比
+L QR_ECLEVEL_L  7%
+M QR_ECLEVEL_M  15%
+Q QR_ECLEVEL_Q  25%
+H QR_ECLEVEL_H  30%
+</pre></li>
+                    <li><p style="padding: 10px 0px;">第四个参数 $size 控制生成图片的大小，默认为4</p></li>
+                    <li><p style="padding: 10px 0px;">第五个参数 $margin 控制生成二维码空白区域大小</p></li>
+                    <li><p style="padding: 10px 0px;">第六个参数 $saveandprint 保存二维码图片并显示出来 ,$outfile必须传递图片路径，此参数默认false</p></li>
+                  </ul>
+               </div>
+               <div class="sm">
+                  <ul>
+                     <li>版权声明：本站原创文章，于2017-11-08，由<a>本人</a>发表</li>
+                     <li>转载请注明：<a href="#">phpqrcode生成二维码</a>|<a href="../index.html">个人博客</a></li>
+                  </ul>
+               </div>
+               <div style="text-align: center;margin-top: 20px;" class="ds">
+                   <button style="border-radius: 20px; padding: 10px 40px;" class="btn btn-primary btn-lg " type="button">打赏</button>
+               </div>
+              <div class="fx">
+                      <ul class="list-inline">
+                          <li>分享:</li>
+                          <li><a href="#"><img style="width: 78px;height: 48px;" src="images/wx.gif"></a></li>
+                          <li><a href="#"><img style="width: 48px;height: 48px;" src="images/xl.jpg"></a></li>
+                          <li><a href="#"><img style="width: 78px;height: 48px;" src="images/qq.jpg"></a></li>
+                      </ul>
+              </div>
+              <div class="xyp">
+                  <ul class="list-inline">
+                     <li><b>下一篇：</b></li>
+                     <li><a href="index_dt.html">冬天来了</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="r_box1">
+                <div class="box">
+                    <div class="box_1">
+                        <div><a href="#">关于博主</a></div>
+                    </div>
+                     <div class="box_2">
+                     	  <div><a href="#">心情随笔</a></div>
+                    </div>
+                     <div class="box_3">
+                     	  <div><a href="#">韶华追忆</a></div>
+                    </div>
+                     <div class="box_4">
+                     	  <div><a href="#">网站首页</a></div>
+                    </div>
+                     <div class="box_5">
+                     	  <div><a href="#">博客留言</a></div>
+                    </div>
+                     <div class="box_6">
+                     	  <div><a href="#">叶子书屋</a></div>
+                    </div>
+                </div>
+
+          </div>
+
+         <div class="lk">
+               <h3>最新文章</h3>
+               <hr>
+               <div class="wz">
+                   <ul>
+                      <li><a href="#">王先森生日快乐</a></li>
+                      <li><a href="#">不要把自己的苦难看得过于独特</a></li>
+                      <li><a href="#">曾梦想仗剑走天涯，后来因为bug太多就没去</a></li>
+                      <li><a href="#">天寒地冻，记得穿秋裤</a></li>
+                      <li><a href="#">我有那么一帮傻姑娘</a></li>
+                      <li><a href="#">php面试题总结（一）</a></li>
+                   </ul>
+
+               </div>
+               <div class="yqlk">
+                   <h3>友情链接</h3>
+                   <hr>
+                   <div class="lk1">
+                      <ul class="list-inline">
+                         <li><a href="#">zhjx922博客</a></li>
+                         <li><a href="#">PHP学习网</a></li>
+                         <li><a href="#">王志军博客</a></li>
+                      </ul>
+                      <ul class="list-inline">
+                         <li><a href="#">KTWO博客</a></li>
+                         <li><a href="#">80乐</a></li>
+                         <li><a href="#">张伟森博客</a></li>
+                         <li><a href="#">Leftso(左搜)</a></li>
+                         
+                      </ul>
+                        <ul class="list-inline">
+                        <li><a href="#">封尘博客</a></li>
+                        </ul>	
+                   </div>
+                
+               </div>
+           </div>
+
+	</article>
+	<footer>
+        <div class="end">
+           <ul>
+               <li><a href="#">Copyright © 2017</a></li>
+               <li><a href="#">www.yezismile.com All rights reserved. 京ICP备15029736号-1</a></li>
+           </ul>
+        </div>
+	</footer>
+	  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

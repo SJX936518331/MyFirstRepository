@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+	<style type="text/css">
+
+         .container-fluid ul li{list-style: none;padding-left: 20px;}
+         .container-fluid ul li:hover{display: block;background-color: gray;}
+
+         .top{height: 1.2em;background-color: gray;}
+         .navbar-default .navbar-nav > li > a:hover
+       {
+          color: white;
+       }
+       .navbar-default .navbar-nav > li > a:focus {
+       	  color:blue;
+        }
+        .navbar-header a img{position: relative;left: 10px;top:10px;}
+        .navbar-nav li{position: relative;top: 8px;}
+        .carousel{position: relative;width: 28%;left: 10%;height: 250px;margin-top: 20px;}
+        .content{position: absolute;top: 16.2%;left: 38%;}
+        .text01{width: 35%;height: 130px;border: solid 1px #ccc;}
+        .text02{width: 35%;height: 120px;border: solid 1px #ccc;}
+        .r_box{position: absolute;top: 16.2%;left: 58%;}
+     /*   .guanzhu .img a img{width: 30%;height: 45%;position: relative;right: 5%;}*/
+       
+        .list li{list-style: none;}
+        .list-inline li a img{width:80px;height: 80px;}
+        .list-inline li a span{padding-left: 25px;padding-right: 1px;}
+        .list-inline li a{text-decoration: none;} 
+        .list-inline .yqlk .lk1 ul li a{text-decoration: none;}
+        .wz ul li a{text-decoration: none;}
+         hr{width: 1%;padding-right: 100%;}
+         h3{font-size: 15px;}
+         .lk1{background-color: white;}
+         body{background-color: #F1FAF9;}
+         .r_box_1{position:absolute;left: 10%;margin-top: 20px;}
+         .r_box_1 h3{font-weight: bold;}
+         .r_box_1 hr{height: 3px;border:none;border-top: 3px double red;width: 3px;}
+         figure a img{width: 30%;height: 50%;}
+         /*.c1 .image a img{} */
+         .r_box_1 .title{position: absolute;top: 80px;left: 220px;}
+         .r_box_1 .title ul li a{color: black;font-size: 15px;}
+         .r_box_1{width: 575px;height: 207px;}
+         .c1{ margin-bottom: 40px;height: 55%;}
+         .title ul {position: relative;top: -16px;left: -70px;}
+         .title1{position: relative;top:-132px;margin-left: 25%;}
+         .title2{position: relative;top:-142px;margin-left: 25%;}
+         .title3{position: relative;top:-128px;margin-left: 25%;}
+         .title4{position: relative;top:-120px;margin-left: 25%;}
+         .title5{position: relative;top:-130px;margin-left: 25%;}
+         .yr{width: 30%;height:100px;}
+         .people{width: 30%;height:110px;}
+         footer .end{height: 50px;background-color: black;position: relative;top: 200px;}
+         .end ul li{list-style: none;}
+         .end ul li a{text-decoration: none;color: white;}
+         .end {text-align: center;}
+         .navbar-default{background-color: #D8D8D8;}
+         .sb{padding-left: 10px;}
+         .r_box{width: 800px;height: 800px;position: relative;left: 13%;}
+         .sy{position: relative;left: 89%;}
+         .sy a{color: gray;text-decoration: none;}
+         .sb{position: relative;left:-12%;}
+         .c{height: 160px;margin-top: 10px;border-radius: 4px;background-color: #F7F7CC;}
+         .c ul li{list-style: none;} 
+         .c ul .data {padding-top: 25px;}
+         .r_box{margin-top: 20px;}
+         .r_box1{height: 200px;  position: relative;top: -10%;width: 25%;left:1005px;top: -820px;}
+         .box{height: 150px;position: relative;top: 50px;}
+         .box_1{border: solid 1px #FFDBA8;text-align: center;height: 75px;width: 33%;text-align: center;padding:22px;margin: 1px;}
+         .box_2{border: solid 1px #FFEF71;text-align: center;height: 75px;width: 33%;position: relative;left: 68%;top: -52%;text-align: center;padding:22px;margin: 1px;}
+         .box_3{border: solid 1px #B8FFF9;text-align: center;height: 75px;width: 33%;position: relative;left: 34%;top: -103%;text-align: center;padding:22px;margin: 1px;}
+         .box_4{border: solid 1px #99FF7F;text-align: center;height: 75px;width: 33%;position: relative;top: -105%;text-align: center;padding:22px;margin: 1px;}
+         .box_5{border: solid 1px #C560C0;text-align: center;height: 75px;width: 33%;position: relative;top: -156%;left: 34%;text-align: center;padding:22px;margin: 1px;}
+         .box_6{border: solid 1px #66B9FF;text-align: center;height: 75px;width: 33%;position: relative;top: -207%;
+         	left:68%;padding:22px;margin: 1px; }
+         .box_1 a{text-decoration: none;color:black;}
+         .box_1 a:hover{}
+         .box_2 a{text-decoration: none;color:black;}
+         .box_3 a{text-decoration: none;color:black;}
+         .box_4 a{text-decoration: none;color:black;}
+         .box_5 a{text-decoration: none;color:black;}
+         .box_6 a{text-decoration: none;color:black;}
+         .lk{width: 300px;position: relative;left: 1005px;top: -800px;}
+         .wz ul{position: relative;left: -25px;}
+         /*article{border: solid 2px gray;}*/
+        /*旋转效果*/
+         .box_1 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_1 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_2 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_2 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_3 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_3 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_4 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_4 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_5 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_5 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_6 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_6 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .a{
+           
+             height: 200px;
+            }
+         .c:hover{background-color: white;}   
+         .t {padding-top: 10px;}
+         .a .c a img{width: 167px;height: 137px;}
+         .c .ul-1{position: relative;left: 160px;width: 80%;top: -140px;}
+         .ul-1 li a button{position: relative;left: 82%;}
+         .t a{color: black;font-weight: bold;}
+         .c .ul-1 li p{margin-top: 20px;}
+         .pg{position: relative;top: 150px;height: 50px;}
+         .pg span{position: relative;left: 430px;top: 25px;}
+         /*vue框架的分页样式*/
+           .pageination_align {
+            text-align: center
+        }
+
+        .pageination {
+            color: #48576a;
+            font-size: 12px;
+            display: inline-block;
+            user-select: none;
+
+        }
+
+        .pagination_page {
+            padding: 0 4px;
+            border: 1px solid #d1dbe5;
+            border-right: 0;
+            background: #fff;
+            font-size: 13px;
+            min-width: 28px;
+            height: 28px;
+            line-height: 28px;
+            cursor: pointer;
+            box-sizing: border-box;
+            text-align: center;
+            float: left;
+        }
+
+        .pagination_page_right {
+            border-right: 1px solid #d1dbe5;
+        }
+
+        .pagination_page:hover {
+            color: white;
+            background-color: #20a0ff;
+        }
+
+        .disabled {
+            color: #e4e4e4 !important;
+            background-color: #fff;
+            cursor: not-allowed;
+        }
+
+        .pagination_page_active {
+            border-color: #20a0ff;
+            background-color: #20a0ff;
+            color: #fff !important;;
+            cursor: default;
+        }
+   </style>
+</head>
+<body>
+	<header>
+      <nav class="nav navbar-default" role="navigation">
+             <div class="top"></div>
+         <div class="container-fluid">
+         	<div class="navbar-header">
+                <a class="navbar-left" href="#"><img src="images/logo.png"></a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                  <span class="sr-only" >切换</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+         	</div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                 <li class="item"><a href="index.html">首页</a></li>
+                 <li class="item "><a href="index_01.html">心情随笔</a></li>
+                 <li class="item"><a href="index_02.html">韶华追忆</a></li>
+                 <li class="item "><a href="index_03.html">技术分享</a></li>
+                 <li class="item"><a href="index_04.html">学无止境</a></li>
+                 <li class="item active"><a href="index_05.html">关于我</a></li>
+              </ul>
+             <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                </div>
+                     <button type="submit" class="btn navbar-btn">搜索</button>
+             </form>
+
+           </div>
+         </div>
+      </nav>
+	</header>
+	<article>
+          <div class="r_box">
+               <div class="top_news ">
+                   <h3>
+                   	<span class="sy"><a href="index.html">返回首页>>></a></span>
+                   	<span class="sb"><b>关于我</b></span>
+                   </h3>
+                   <hr style="height: 0px;border: none;border-top: 4px ridge red;">
+               </div>
+                    <div class="a"> 
+                    <div class="c">
+                      <a><img src="images/35-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="#">关于自己的书屋</a></li>
+                     <li><p>8月初就开始着手开发书屋的一些功能，因为工作的原因，进度还是有点慢。之所以想弄一个书屋，是觉得自己记忆力不太好，知识也有点匮乏，过去看过的书过一个星期就不记得讲的什么，我需要记录读书的感想，记录看书给我带来的精神共鸣...</p></li>
+                     <li><a href="#"><button class="btn btn-success">阅读全文</button></a></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+             <!--    <div class="title">
+                <ul>
+                    <h3><a href="#">重新解读常见的排序算法</a></h3>
+                      <p>冒泡排序：最简单的一种算法，如果第一次接触程序的同学，就会有一些疑惑，为什么那么写。我举例子说明一下：就比如你有两个瓶子，分别是A瓶，B瓶，瓶子里都装满了水，你想把这AB两瓶水做一个交换，在生活中，你一定会找来第三个... </p>
+                </ul>
+               </div> -->
+              <div class="a"> 
+                    <div class="c">
+                      <a><img src="images/36-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="#">SJX博客2.0上线</a></li>
+                     <li><p>一开始我计划着用wordpress搭建个人网站，后来从官方上下载源码，着手准备wp 的编程之旅。正处于兴奋的时候，我发现了另一个小巧轻便的框架thinkjs，于是我还是按耐不住好奇心，整整...  </p></li>
+                     <li><a href="#"><button class="btn btn-success">阅读全文</button></a></li>
+                  </ul>
+               </div>
+             </div>
+                <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+               <div class="a"> 
+                    <div class="c">
+                      <a><img src="images/37-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="#">关于淘宝屋</a></li>
+                     <li><p>淘宝屋是今天刚上线的一个栏目，最近特别忙，忙得没有时间管理这个博客，没有时间管理淘宝店，每天不停得敲着代码，有时候，累到闭着一只眼睛在敲，每天最期望得就是可以睡一个懒觉，没有太多奢望，只是奢望阳光可以充足一点，生活可以更...  </p></li>
+                     <li><a href="#"><button class="btn btn-success">阅读全文</button></a></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                  <div class="a"> 
+                    <div class="c">
+                      <a><img src="images/38-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="#">关于友情链接</a></li>
+                     <li><p>申请SJX博客网站的友情链接童鞋们：申请步骤如下：1、首先在贵站做好SJX博客的文字友情链接、其次在首页的Blog留言中，留下贵站的名称、网站url等。2、申... </p></li>
+                     <li><a href="#"><button class="btn btn-success">阅读全文</button></a></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                    <div class="a"> 
+                    <div class="c">
+                      <a><img src="images/39-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="#">关于博客</a></li>
+                     <li><p>认认真真写一下关于博客，当初建立博客的时候，那时我还处在学写程序的初步阶段。所谓的零基础，就是什么都不会。那个时候面对代码，我就觉得像面对恶魔一样，内心充满了恐惧和不安。我每天都在想，我是不是就不是敲代码的料，我是不...  </p></li>
+                     <li><a href="#"><button class="btn btn-success">阅读全文</button></a></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                    <div class="a"> 
+                    <div class="c">
+                      <a><img src="images/40-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="#">关于博主</a></li>
+                     <li><p>个人资料：男，九零后，IT男，双子座，IT界最不着调的程序员 爱好：写文字、涂鸦、发呆、闲逛、旅行、滑旱冰、吃零食、喝七喜、各种奇奇怪怪的想法 个人简介： 九零后，IT boy，手机控，电脑控，喜... </p></li>
+                     <li><a href="#"><button class="btn btn-success">阅读全文</button></a></li>
+                  </ul>
+               </div>
+             </div>       
+          </div>
+          <div class="r_box1">
+                <div class="box">
+                    <div class="box_1">
+                        <div><a href="#">关于博主</a></div>
+                    </div>
+                     <div class="box_2">
+                     	  <div><a href="#">心情随笔</a></div>
+                    </div>
+                     <div class="box_3">
+                     	  <div><a href="#">韶华追忆</a></div>
+                    </div>
+                     <div class="box_4">
+                     	  <div><a href="#">网站首页</a></div>
+                    </div>
+                     <div class="box_5">
+                     	  <div><a href="#">博客留言</a></div>
+                    </div>
+                     <div class="box_6">
+                     	  <div><a href="#">叶子书屋</a></div>
+                    </div>
+                </div>
+          </div>
+         <div class="lk">
+               <h3>最新文章</h3>
+               <hr>
+               <div class="wz">
+                   <ul>
+                      <li><a href="#">王先森生日快乐</a></li>
+                      <li><a href="#">不要把自己的苦难看得过于独特</a></li>
+                      <li><a href="#">曾梦想仗剑走天涯，后来因为bug太多就没去</a></li>
+                      <li><a href="#">天寒地冻，记得穿秋裤</a></li>
+                      <li><a href="#">我有那么一帮傻姑娘</a></li>
+                      <li><a href="#">php面试题总结（一）</a></li>
+                   </ul>
+
+               </div>
+               <div class="yqlk">
+                   <h3>友情链接</h3>
+                   <hr>
+                   <div class="lk1">
+                      <ul class="list-inline">
+                         <li><a href="#">zhjx922博客</a></li>
+                         <li><a href="#">PHP学习网</a></li>
+                         <li><a href="#">王志军博客</a></li>
+                      </ul>
+                      <ul class="list-inline">
+                         <li><a href="#">KTWO博客</a></li>
+                         <li><a href="#">80乐</a></li>
+                         <li><a href="#">张伟森博客</a></li>
+                         <li><a href="#">Leftso(左搜)</a></li>
+                         
+                      </ul>
+                        <ul class="list-inline">
+                        <li><a href="#">封尘博客</a></li>
+                        </ul>	
+
+                   </div>
+               </div>
+           </div>
+        <div class="pg">
+            <span>每页6条记录/共6条</span>
+           <pageination :total="model.total" :size="model.size" :page="model.page" :changge="pageFn" ></pageination>
+    </div>
+	</article>
+	<footer>
+        <div class="end">
+           <ul>
+               <li><a href="#">Copyright © 2017</a></li>
+               <li><a href="#">www.yezismile.com All rights reserved. 京ICP备15029736号-1</a></li>
+           </ul>
+        </div>
+	</footer>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/pageination.js"></script>
+    <script>
+  window.onload=function () {
+      var app = new Vue({
+          el: '.pg',
+          data() {
+              return {
+                  model:{
+                      total:1,//总页数
+                      size:6,//每页显示条目个数不传默认10
+                      page:1,//当前页码
+                  }
+              }
+          },
+          methods:{
+              //页码切换执行方法
+              pageFn(val){
+                  this.model.page=val;
+                  console.log(val);
+              }
+          }
+      })
+  }
+
+
+</script>
+</body>
+</html>

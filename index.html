@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+
+         .container-fluid ul li{list-style: none;padding-left: 20px;}
+         .container-fluid ul li:hover{display: block;background-color: gray;}
+         .top{height: 1.2em;background-color: gray;}
+         .navbar-default .navbar-nav > li > a:hover
+       {
+          color: white;
+       }
+       .navbar-default .navbar-nav > li > a:focus {
+       	  color:blue;
+        }
+        .navbar-header a img{position: relative;left: 10px;top:10px;}
+        .navbar-nav li{position: relative;top: 8px;}
+        .carousel{position: relative;width: 28%;left: 10%;height: 250px;margin-top: 20px;}
+        .content{position: absolute;top: 16.2%;left: 38%;}
+        .text01{width: 35%;height: 130px;border: solid 1px #ccc;}
+        .text02{width: 35%;height: 120px;border: solid 1px #ccc;}
+        .r_box{position: absolute;top: 16.2%;left: 58%;}
+     /*   .guanzhu .img a img{width: 30%;height: 45%;position: relative;right: 5%;}*/
+       
+        .list li{list-style: none;}
+        .list-inline li a img{width:80px;height: 80px;}
+        .list-inline li a span{padding-left: 25px;padding-right: 1px;}
+        .list-inline li a{text-decoration: none;} 
+        .list-inline .yqlk .lk1 ul li a{text-decoration: none;}
+        .wz ul li a{text-decoration: none;}
+         hr{width: 1%;padding-right: 100%;}
+         h3{font-size: 15px;}
+         .lk1{background-color: white;}
+         body{background-color: #F1FAF9;}
+         .r_box_1{position:absolute;left: 10%;margin-top: 20px;}
+         .r_box_1 h3{font-weight: bold;}
+         .r_box_1 hr{height: 3px;border:none;border-top: 3px double red;width: 3px;}
+         figure a img{width: 30%;height: 50%;}
+         /*.c1 .image a img{} */
+         .r_box_1 .title{position: absolute;top: 80px;left: 220px;}
+         .r_box_1 .title ul li a{color: black;font-size: 15px;}
+         .r_box_1{width: 575px;height: 207px;}
+         .c1{ margin-bottom: 40px;height: 55%;}
+         .title ul {position: relative;top: -16px;left: -70px;}
+         .title1{position: relative;top:-132px;margin-left: 25%;}
+         .title2{position: relative;top:-142px;margin-left: 25%;}
+         .title3{position: relative;top:-128px;margin-left: 25%;}
+         .title4{position: relative;top:-120px;margin-left: 25%;}
+         .title5{position: relative;top:-130px;margin-left: 25%;}
+         .yr{width: 30%;height:100px;}
+         .people{width: 30%;height:110px;}
+         footer .end{height: 50px;background-color: black;position: relative;top: 1200px;}
+         .end ul li{list-style: none;}
+         .end ul li a{text-decoration: none;color: white;}
+         .end {text-align: center;}
+         .navbar-default{background-color: #D8D8D8;}
+         .c1:hover{background-color: white;}
+   </style>
+</head>
+
+<body >
+	<header>
+      <nav class="nav navbar-default" role="navigation">
+             <div class="top"></div>
+         <div class="container-fluid">
+         	<div class="navbar-header">
+                <a class="navbar-left" href="#"><img src="images/logo.png"></a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                  <span class="sr-only" >切换</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+         	</div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                 <li class="active"><a href="index.html">首页</a></li>
+                 <li><a href="index_01.html">心情随笔</a></li>
+                 <li><a href="index_02.html">韶华追忆</a></li>
+                 <li><a href="index_03.html">技术分享</a></li>
+                 <li><a href="index_04.html">学无止境</a></li>
+                 <li><a href="index_05.html">关于我</a></li>
+              </ul>
+             <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                </div>
+                     <button type="submit" class="btn navbar-btn">搜索</button>
+             </form>
+
+           </div>
+         </div>
+      </nav>
+	</header>
+	<article>
+         <div class="carousel slide " id="carousel-example-generic" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li class="active" data-target="#carousel-example-generic" data-slide-to="0"></li>
+                <li class="active" data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li class="active" data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li class="active" data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+           <div class="carousel-inner" role="listbox" > 
+                <div class="item active">
+                    <img src="images/01.jpg">
+                </div>
+                  <div class="item ">
+                    <img src="images/02.jpg">
+                </div>
+                <div class="item ">
+                    <img src="images/03.jpg">
+                </div>
+                <div class="item ">
+                    <img src="images/04.jpg">
+                </div>
+           </div>
+           <a class="carousel-control left" href="#carousel-example-generic" 
+                 data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#carousel-example-generic" 
+                 data-slide="next">&rsaquo;</a>
+      </div>
+        <div class="content ">
+            <section class="text01">
+                <h3><a href="#">关于博主</a></h3>
+                <p>个人资料：男，九零后，IT男，狮子座，IT界最不着调的程序员 爱好：写文字、涂鸦</p>
+            </section >
+             <section class="text02">
+                <h3><a href="#">关于叶子书屋</a></h3>
+                <p>8月初就开始着手开发书屋的一些功能，因为工作的原因，进度还是有点慢。之所以想弄一</p>
+            </section >     
+        </div>
+        <div class="r_box">
+           <div class="guanzhu">
+                 <h3>关注我</h3>
+                 <hr>
+                 <div class="img">
+                 	<ul class="list-inline">
+                       <li><a href="#"><img src="images/xinglang.jpg"></a></li>
+                       <li><a href="#"><img src="images/tengxun.jpg"></a></li>
+                       <li><a href="#"><img src="images/email.jpg"></a></li>
+                       <li><a href="#"><img src="images/yijian.jpg"></a></li>
+                 	</ul>
+                 	<ul class="list-inline">
+                       <li><a href="#"><span>新浪微博</span></a></li>
+                       <li><a href="#"><span>腾讯微博</span></a></li>
+                       <li><a href="#"><span>邮箱</span></a></li>
+                       <li><a href="#"><span>意见反馈</span></a></li>
+                 	</ul>
+                 </div>
+           </div>
+           <div class="lk">
+               <h3>最新文章</h3>
+               <hr>
+               <div class="wz">
+                   <ul>
+                      <li><a href="./zhuiyi/index_wxs.html">王先森生日快乐</a></li>
+                      <li><a href="./zhuiyi/index_no.html">不要把自己的苦难看得过于独特</a></li>
+                      <li><a href="./zhuiyi/index_mx.html">曾梦想仗剑走天涯，后来因为bug太多就没去</a></li>
+                      <li><a href="./zhuiyi/index_dd.html">天寒地冻，记得穿秋裤</a></li>
+                      <li><a href="./zhuiyi/index_gn.html">我有那么一帮傻姑娘</a></li>
+                      <li><a href="./zhuiyi/index_mx.html">php面试题总结（一）</a></li>
+                   </ul>
+
+               </div>
+               <div class="yqlk">
+                   <h3>友情链接</h3>
+                   <hr>
+                   <div class="lk1">
+                      <ul class="list-inline">
+                         <li><a href="#">zhjx922博客</a></li>
+                         <li><a href="#">PHP学习网</a></li>
+                         <li><a href="#">王志军博客</a></li>
+                      </ul>
+                      <ul class="list-inline">
+                         <li><a href="#">KTWO博客</a></li>
+                         <li><a href="#">80乐</a></li>
+                         <li><a href="#">张伟森博客</a></li>
+                         <li><a href="#">Leftso(左搜)</a></li>
+                         
+                      </ul>
+                        <ul class="list-inline">
+                        <li><a href="#">封尘博客</a></li>
+                        </ul>	
+
+                   </div>
+               </div>
+           </div>
+
+        </div>
+       <div class="r_box_1">
+           <h3>最新文章</h3>
+           <hr>
+           <div class="c1">
+                <figure>
+                  <a href="./jishu_share/index_px.html"><img src="images/01-.jpg"></img></a>
+               </figure>
+               <div class="title">
+               	<ul>
+                    <h3><a href="./jishu_share/index_px.html">重新解读常见的排序算法</a></h3>
+                      <p>冒泡排序：最简单的一种算法，如果第一次接触程序的同学，就会有一些疑惑，为什么那么写。我举例子说明一下：就比如你有两个瓶子，分别是A瓶，B瓶，瓶子里都装满了水，你想把这AB两瓶水做一个交换，在生活中，你一定会找来第三个... </p>
+               	</ul>
+               </div>
+           </div>
+           <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+               <div class="c1">
+                <figure>
+                  <a href="./zhuiyi/index_dt.html"><img src="images/02-.jpeg"></a>
+               </figure>
+               <div class="title1">
+               	<ul>
+                    <h3><a href="./zhuiyi/index_dt.html">冬天来了</a></h3>
+                      <p>冬天来了，树叶落了，雾霾笼罩在北京的上空，我戴着口罩走在那条熟悉的街上，旁边那只白色的博美犬玩得真嗨，它窜来窜去，踩着地上落下的树叶，主人在后面喊它的名字，它装作没听见，继续踩着落叶发出刺啦刺啦的声音，我感慨道 </p>
+               	</ul>
+               </div>
+           </div>
+            <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+               <div class="c1">
+                <figure>
+                  <a href="./zhuiyi/index_wxs.html"><img src="images/03-.jpg"></img></a>
+               </figure>
+               <div class="title2">
+               	<ul>
+                    <h3><a href="./zhuiyi/index_wxs.html">王先森，生日快乐</a></h3>
+                      <p>王先森，生日快乐，恭喜你又老一岁。但是不管你过多少个生日，在我心中，你永远是最帅气的先森。我们是从2010年五月十日在一起的，到现在已有七个年头。时光总是一晃而过，你总是说我长得越来越像你，尤其是笑起来的时候，眉眼里... </p>
+               	</ul>
+               </div>
+           </div>
+                 <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+               <div class="c1">
+                <figure>
+                  <a href="./zhuiyi/index_no.html"><img src="images/04-.jpg"></img></a>
+               </figure>
+               <div class="title3">
+               	<ul>
+                    <h3><a href="./zhuiyi/index_no.html">不要把自己的苦难看得过于独特</a></h3>
+                      <p>小时候，家贫，总是喜欢同学戴得那个毛茸茸的帽子，镶嵌着蓝色的蝴蝶，在我心里分外美丽。我总是和老妈说，我也想要一顶那样的帽子，也就十来块钱，为啥不给我买。每当我特别迷恋一件东西时，我就忘记家贫这个事实。 </p>
+               	</ul>
+               </div>
+           </div>
+                      <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+               <div class="c1">
+                <figure>
+                  <a href="./zhuiyi/index_mx.html"><img class="yr" src="images/05.jpg"></img></a>
+               </figure>
+               <div class="title4">
+               	<ul>
+                    <h3><a href="./zhuiyi/index_mx.html">曾梦想仗剑走天涯，后来因为bug太多就没去</a></h3>
+                      <p>曾经梦想仗剑走天涯，可谁曾想，一入IT深似海，曾经梦想赴沧海。总是有写不完的程序，改不完的bug，扯不完的皮。产品一筹莫展的时候最喜欢拉着俺们程序员开会了，乱七八糟的需求理不清的思路，拉着我们扯一会儿皮，问题就迎刃而...  </p>
+               	</ul>
+               </div>
+           </div>
+                         <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+               <div class="c1">
+                <figure>
+                  <a href="./zhuiyi/index_dd.html"><img class="people" src="images/06.jpg"></img></a>
+               </figure>
+               <div class="title5">
+               	<ul>
+                    <h3><a href="./zhuiyi/index_dd.html">天寒地冻，记得穿秋裤</a></h3>
+                      <p>天寒地冻，忘穿秋裤，无处话凄凉。四季更迭，唯有冬天最难熬。日变短了夜变长了，天还没亮就得起床上班，一想到那个画面就缩成一团。每逢换季，衣柜就得重新整理，夏天的裙子放起来等来年穿，冬天的棉服提前备好等着过冬。 ...  </p>
+               	</ul>
+               </div>
+           </div>
+       </div>
+	</article>
+	<footer>
+        <div class="end">
+           <ul>
+               <li><a href="#">Copyright © 2017</a></li>
+               <li><a href="#">www.yezismile.com All rights reserved. 京ICP备15029736号-1</a></li>
+           </ul>
+        </div>
+	</footer>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

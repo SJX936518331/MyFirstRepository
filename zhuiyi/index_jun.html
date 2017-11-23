@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+
+         .container-fluid ul li{list-style: none;padding-left: 20px;}
+         .container-fluid ul li:hover{display: block;background-color: gray;}
+
+         .top{height: 1.2em;background-color: gray;}
+         .navbar-default .navbar-nav > li > a:hover
+       {
+          color: white;
+       }
+       .navbar-default .navbar-nav > li > a:focus {
+       	  color:blue;
+        }
+        .navbar-header a img{position: relative;left: 10px;top:10px;}
+        .navbar-nav li{position: relative;top: 8px;}
+        .carousel{position: relative;width: 28%;left: 10%;height: 250px;margin-top: 20px;}
+        .content{position: absolute;top: 16.2%;left: 38%;}
+        .text01{width: 35%;height: 130px;border: solid 1px #ccc;}
+        .text02{width: 35%;height: 120px;border: solid 1px #ccc;}
+        .r_box{position: absolute;top: 16.2%;left: 58%;}
+     /*   .guanzhu .img a img{width: 30%;height: 45%;position: relative;right: 5%;}*/
+       
+        .list li{list-style: none;}
+        .list-inline li a img{width:80px;height: 80px;}
+        .list-inline li a span{padding-left: 25px;padding-right: 1px;}
+        .list-inline li a{text-decoration: none;} 
+        .list-inline .yqlk .lk1 ul li a{text-decoration: none;}
+        .wz ul li a{text-decoration: none;}
+         hr{width: 1%;padding-right: 100%;}
+         h3{font-size: 15px;}
+         .lk1{background-color: white;}
+         body{background-color: #F1FAF9;}
+         .r_box_1{position:absolute;left: 10%;margin-top: 20px;}
+         .r_box_1 h3{font-weight: bold;}
+         .r_box_1 hr{height: 3px;border:none;border-top: 3px double red;width: 3px;}
+         figure a img{width: 30%;height: 50%;}
+         /*.c1 .image a img{} */
+         .r_box_1 .title{position: absolute;top: 80px;left: 220px;}
+         .r_box_1 .title ul li a{color: black;font-size: 15px;}
+         .r_box_1{width: 575px;height: 207px;}
+         .c1{ margin-bottom: 40px;height: 55%;}
+         .title ul {position: relative;top: -16px;left: -70px;}
+         .title1{position: relative;top:-132px;margin-left: 25%;}
+         .title2{position: relative;top:-142px;margin-left: 25%;}
+         .title3{position: relative;top:-128px;margin-left: 25%;}
+         .title4{position: relative;top:-120px;margin-left: 25%;}
+         .title5{position: relative;top:-130px;margin-left: 25%;}
+         .yr{width: 30%;height:100px;}
+         .people{width: 30%;height:110px;}
+         footer .end{height: 50px;background-color: black;position: relative;top:700px;}
+         .end ul li{list-style: none;}
+         .end ul li a{text-decoration: none;color: white;}
+         .end {text-align: center;}
+         .navbar-default{background-color: #D8D8D8;}
+         .sb{padding-left: 10px;}
+         .r_box{width: 800px;height: 800px;position: relative;left: 13%;}
+         .top_news h3 span{padding:0px 6px; }
+
+         .c{border: solid 2px gray;height: auto;margin-top: 10px;border-radius: 4px;background-color: #F7F7CC;}
+        /* .c:hover{background-color: white;}*/
+         .c ul li{list-style: none;} 
+         .c ul .data {padding-top: 25px;}
+         .r_box{margin-top: 20px;}
+         .r_box1{height: 200px;  position: relative;top: -10%;width: 25%;left:1005px;top: -820px;}
+         .box{height: 150px;position: relative;top: 50px;}
+         .box_1{border: solid 1px #FFDBA8;text-align: center;height: 75px;width: 33%;text-align: center;padding:22px;margin: 1px;}
+         .box_2{border: solid 1px #FFEF71;text-align: center;height: 75px;width: 33%;position: relative;left: 68%;top: -52%;text-align: center;padding:22px;margin: 1px;}
+         .box_3{border: solid 1px #B8FFF9;text-align: center;height: 75px;width: 33%;position: relative;left: 34%;top: -103%;text-align: center;padding:22px;margin: 1px;}
+         .box_4{border: solid 1px #99FF7F;text-align: center;height: 75px;width: 33%;position: relative;top: -105%;text-align: center;padding:22px;margin: 1px;}
+         .box_5{border: solid 1px #C560C0;text-align: center;height: 75px;width: 33%;position: relative;top: -156%;left: 34%;text-align: center;padding:22px;margin: 1px;}
+         .box_6{border: solid 1px #66B9FF;text-align: center;height: 75px;width: 33%;position: relative;top: -207%;
+         	left:68%;padding:22px;margin: 1px; }
+         .box_1 a{text-decoration: none;color:black;}
+         .box_2 a{text-decoration: none;color:black;}
+         .box_3 a{text-decoration: none;color:black;}
+         .box_4 a{text-decoration: none;color:black;}
+         .box_5 a{text-decoration: none;color:black;}
+         .box_6 a{text-decoration: none;color:black;}
+         .lk{width: 300px;position: relative;left: 1005px;top: -800px;}
+         .wz ul{position: relative;left: -25px;}
+         /*article{border: solid 2px gray;}*/
+        /*旋转效果*/
+         .box_1 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_1 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_2 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_2 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_3 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_3 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_4 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_4 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_5 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_5 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_6 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_6 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+.glyphicon {
+  padding: 0px 10px;
+}
+pre{background-color:#F7F7CC;border: none; }
+.sm{margin-top: 15px;height: auto;background-color: #F0F0F0;border: solid 2px #F7F7CC;}
+.fx{height: auto;margin-top: 10px;}
+.xyp{height: auto;margin-top: 20px;}
+.xyp ul li a:hover{color: black;}
+.syp{height: auto;margin-top: 20px;}
+.syp ul li a:hover{color: black;}
+   </style>
+</head>
+<body>
+	<header>
+      <nav class="nav navbar-default" role="navigation">
+             <div class="top"></div>
+         <div class="container-fluid">
+         	<div class="navbar-header">
+                <a class="navbar-left" href="#"><img src="images/logo.png"></a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                  <span class="sr-only" >切换</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+         	</div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                 <li class="item"><a href="../index.html">首页</a></li>
+                 <li class="item active"><a href="../index_01.html">心情随笔</a></li>
+                 <li class="item"><a href="../index_02.html">韶华追忆</a></li>
+                 <li class="item"><a href="../index_03.html">技术分享</a></li>
+                 <li class="item"><a href="../index_04.html">学无止境</a></li>
+                 <li class="item"><a href="../index_05.html">关于我</a></li>
+              </ul>
+             <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                </div>
+                     <button type="submit" class="btn navbar-btn">搜索</button>
+             </form>
+
+           </div>
+         </div>
+      </nav>
+	</header>
+	<article>
+          <div class="r_box">
+               <div class="top_news ">
+                   <h3>
+                    <span ><b style="font-size: 16px">您现在的位置是：</b></span>
+                   	<span ><a href="../index.html" style="color: black">首页></a></span>
+                    <span ><a href="../index_02.html" style="color: black">韶华追忆>></a></span>
+                   </h3>
+                   <hr style="height: 0px;border: none;border-top: 4px ridge red;">
+               </div>
+                <div class="c">
+                  <ul>
+                     <li><h2 style="font-size: 20px;">记军博一行</h2></li>
+                     <li class="glyphicon glyphicon-user">邵建欣</li>
+                     <li class="glyphicon glyphicon-calendar">2017-08-30 16:21:34</li>
+                     <li><p style="padding: 10px 0px">特别早特别早就想去军博转一下了，前几年路过军博的时候，要么就是人多排队太长，要么就是没带身份证干瞪眼。你要问我为什么想去军博看看，单纯的想去看看，我想了解当年的小米加步枪是怎样打败侵略者，我想了解原子弹是怎样的艰辛才研制出来的，我想知道那些苦难的日子我们的先辈是靠怎样的意志力挺过来的，我想知道今日的幸福生活是靠多少革命烈士舍生救国换来的。我想我想了解的一切，一定会放在博物馆，那些难忘而深刻的记忆一定会存放在博物馆的橱窗里，用透明的玻璃隔着，课本上出现的烈士名字我想一定也会出现在博物馆上的呈列的名单上，我们熟悉的雷锋，我们熟悉的邓稼先，我们熟悉的十大元帅，我们熟悉的地道战画面，我想博物馆一定有。</p></li>
+                    <li><p>上周六，还是去军博过了一把瘾。我以为我铁石心肠不会感动，但还是不免俗套的感动的哇哇得直喊，好厉害，好了不起。我承认我词穷了，我不知道该用什么词来形容自己眼睛看到的那些军事装备。上面写着中国造1956式7.62毫米半自动步枪，上面写着中国造98A式120毫米反坦克火箭筒，上面写着缴获美国造柯尔特0.45英寸手枪，每一把枪的背后我猜想都会有一个美好的故事，我努力去想象那些苦难的人们是怎样苦中作乐的，他们用罐头做的二胡奏出的声音是不是响彻整个雪地，他们围在柴火堆旁边聊些什么，是明天的作战计划，还是在思念远方的孩子。</p></li>
+                    <li style="text-align: center;"><img width="375" height="500" src="images/jun_01.jpg"></li>
+                    <li><p>那天，排队的人特别多，军博的闭馆时间是下午四点。我们到军博站正好是饭点，看排队人那么多，就把午饭也免了，安心排起队来。在我前面站着的是一个胖胖的约莫五六岁的小孩子，他一直在观察来来往往的人，嘴里喃喃道，怎么这么多人。我也有同样的疑问，怎么有这么多人呢。我进入了馆内，我就自顾自地的看起来，然后就和先生走散了。我一路从抗日战争一直看到了今天的和平年代，脚掌有点痛，但还是特别的认真的看完了每个年代发生的事，馆内做了好多3D的效果，能听到大炮轰隆隆的声音，能看到他们并肩作战的场面，能看到好多飞机在天上飞，能看到好多降落伞悬在空中，抬眼就能看到红色的五星红旗，那种从心底涌出的骄傲感都写在了脸上。最让我震撼的时候，我眼里看到得都是大飞机，那个地方呈列的都是飞机，真的飞机，还有战争年代留下的飞机残骸，还有那我抬眼看不见头的东风一号，东风二号，我这没见过世面的又过了一把眼瘾。</p></li>
+                     <li style="text-align: center;"><img width="167" height="126" src="images/jun_02.jpg"></li>
+                     <li><p>我们这一代生活在和平年代，没有见过什么大风大浪，遇到点小坎小坷就觉得这辈子遇到了大麻烦了，要么就是负能量爆棚，要么就一蹶不振自生自灭。我们这一代不明白生和死的真正含义，那种英勇就义的场面也只能在电视剧里看看。生活里想学做一次雷锋，无奈总是被坏人钻了空子。如果你在北京，有时间去军博感受一下那个震撼的画面吧，如果你在别处，有空来京去军博感受一下我说的那种壮观。临了，我洒点鸡汤，祖国再不好，我依然对这块土地爱得深沉。</p></li>
+                     <li style="text-align: center;"><img width="500" height="375" src="images/jun_03.jpg"></li>
+                  </ul>
+               </div>
+               <div class="sm">
+                  <ul>
+                     <li>版权声明：本站原创文章，于2017-11-08，由<a>本人</a>发表</li>
+                     <li>转载请注明：<a href="#">重新解读常见的排序算法</a>|<a href="index.html">个人博客</a></li>
+                  </ul>
+               </div>
+               <div style="text-align: center;margin-top: 20px;" class="ds">
+                   <button style="border-radius: 20px; padding: 10px 40px;" class="btn btn-primary btn-lg " type="button">打赏</button>
+               </div>
+              <div class="fx">
+                      <ul class="list-inline">
+                          <li>分享:</li>
+                          <li><a href="#"><img style="width: 78px;height: 48px;" src="images/wx.gif"></a></li>
+                          <li><a href="#"><img style="width: 48px;height: 48px;" src="images/xl.jpg"></a></li>
+                          <li><a href="#"><img style="width: 78px;height: 48px;" src="images/qq.jpg"></a></li>
+                      </ul>
+              </div>
+              <div class="syp">
+                 <ul class="list-inline">
+                     <li><b>上一篇：</b></li>
+                     <li><a href="index_gn.html">我有那么一帮傻姑娘</a></li>
+                  </ul>
+              </div>
+              <div class="xyp">
+                  <ul class="list-inline">
+                     <li><b>下一篇：</b></li>
+                     <li><a href="#">其实我是个假程序员</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="r_box1">
+                <div class="box">
+                    <div class="box_1">
+                        <div><a href="#">关于博主</a></div>
+                    </div>
+                     <div class="box_2">
+                     	  <div><a href="#">心情随笔</a></div>
+                    </div>
+                     <div class="box_3">
+                     	  <div><a href="#">韶华追忆</a></div>
+                    </div>
+                     <div class="box_4">
+                     	  <div><a href="#">网站首页</a></div>
+                    </div>
+                     <div class="box_5">
+                     	  <div><a href="#">博客留言</a></div>
+                    </div>
+                     <div class="box_6">
+                     	  <div><a href="#">叶子书屋</a></div>
+                    </div>
+                </div>
+
+          </div>
+
+         <div class="lk">
+               <h3>最新文章</h3>
+               <hr>
+               <div class="wz">
+                   <ul>
+                      <li><a href="#">王先森生日快乐</a></li>
+                      <li><a href="#">不要把自己的苦难看得过于独特</a></li>
+                      <li><a href="#">曾梦想仗剑走天涯，后来因为bug太多就没去</a></li>
+                      <li><a href="#">天寒地冻，记得穿秋裤</a></li>
+                      <li><a href="#">我有那么一帮傻姑娘</a></li>
+                      <li><a href="#">php面试题总结（一）</a></li>
+                   </ul>
+
+               </div>
+               <div class="yqlk">
+                   <h3>友情链接</h3>
+                   <hr>
+                   <div class="lk1">
+                      <ul class="list-inline">
+                         <li><a href="#">zhjx922博客</a></li>
+                         <li><a href="#">PHP学习网</a></li>
+                         <li><a href="#">王志军博客</a></li>
+                      </ul>
+                      <ul class="list-inline">
+                         <li><a href="#">KTWO博客</a></li>
+                         <li><a href="#">80乐</a></li>
+                         <li><a href="#">张伟森博客</a></li>
+                         <li><a href="#">Leftso(左搜)</a></li>
+                         
+                      </ul>
+                        <ul class="list-inline">
+                        <li><a href="#">封尘博客</a></li>
+                        </ul>	
+                   </div>
+                
+               </div>
+           </div>
+
+	</article>
+	<footer>
+        <div class="end">
+           <ul>
+               <li><a href="#">Copyright © 2017</a></li>
+               <li><a href="#">www.yezismile.com All rights reserved. 京ICP备15029736号-1</a></li>
+           </ul>
+        </div>
+	</footer>
+	  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

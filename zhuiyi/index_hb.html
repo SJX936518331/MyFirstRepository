@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+
+         .container-fluid ul li{list-style: none;padding-left: 20px;}
+         .container-fluid ul li:hover{display: block;background-color: gray;}
+
+         .top{height: 1.2em;background-color: gray;}
+         .navbar-default .navbar-nav > li > a:hover
+       {
+          color: white;
+       }
+       .navbar-default .navbar-nav > li > a:focus {
+       	  color:blue;
+        }
+        .navbar-header a img{position: relative;left: 10px;top:10px;}
+        .navbar-nav li{position: relative;top: 8px;}
+        .carousel{position: relative;width: 28%;left: 10%;height: 250px;margin-top: 20px;}
+        .content{position: absolute;top: 16.2%;left: 38%;}
+        .text01{width: 35%;height: 130px;border: solid 1px #ccc;}
+        .text02{width: 35%;height: 120px;border: solid 1px #ccc;}
+        .r_box{position: absolute;top: 16.2%;left: 58%;}
+     /*   .guanzhu .img a img{width: 30%;height: 45%;position: relative;right: 5%;}*/
+       
+        .list li{list-style: none;}
+        .list-inline li a img{width:80px;height: 80px;}
+        .list-inline li a span{padding-left: 25px;padding-right: 1px;}
+        .list-inline li a{text-decoration: none;} 
+        .list-inline .yqlk .lk1 ul li a{text-decoration: none;}
+        .wz ul li a{text-decoration: none;}
+         hr{width: 1%;padding-right: 100%;}
+         h3{font-size: 15px;}
+         .lk1{background-color: white;}
+         body{background-color: #F1FAF9;}
+         .r_box_1{position:absolute;left: 10%;margin-top: 20px;}
+         .r_box_1 h3{font-weight: bold;}
+         .r_box_1 hr{height: 3px;border:none;border-top: 3px double red;width: 3px;}
+         figure a img{width: 30%;height: 50%;}
+         /*.c1 .image a img{} */
+         .r_box_1 .title{position: absolute;top: 80px;left: 220px;}
+         .r_box_1 .title ul li a{color: black;font-size: 15px;}
+         .r_box_1{width: 575px;height: 207px;}
+         .c1{ margin-bottom: 40px;height: 55%;}
+         .title ul {position: relative;top: -16px;left: -70px;}
+         .title1{position: relative;top:-132px;margin-left: 25%;}
+         .title2{position: relative;top:-142px;margin-left: 25%;}
+         .title3{position: relative;top:-128px;margin-left: 25%;}
+         .title4{position: relative;top:-120px;margin-left: 25%;}
+         .title5{position: relative;top:-130px;margin-left: 25%;}
+         .yr{width: 30%;height:100px;}
+         .people{width: 30%;height:110px;}
+         footer .end{height: 50px;background-color: black;position: relative;top:50px;}
+         .end ul li{list-style: none;}
+         .end ul li a{text-decoration: none;color: white;}
+         .end {text-align: center;}
+         .navbar-default{background-color: #D8D8D8;}
+         .sb{padding-left: 10px;}
+         .r_box{width: 800px;height: 800px;position: relative;left: 13%;}
+         .top_news h3 span{padding:0px 6px; }
+
+         .c{border: solid 2px gray;height: auto;margin-top: 10px;border-radius: 4px;background-color: #F7F7CC;}
+        /* .c:hover{background-color: white;}*/
+         .c ul li{list-style: none;} 
+         .c ul .data {padding-top: 25px;}
+         .r_box{margin-top: 20px;}
+         .r_box1{height: 200px;  position: relative;top: -10%;width: 25%;left:1005px;top: -820px;}
+         .box{height: 150px;position: relative;top: 50px;}
+         .box_1{border: solid 1px #FFDBA8;text-align: center;height: 75px;width: 33%;text-align: center;padding:22px;margin: 1px;}
+         .box_2{border: solid 1px #FFEF71;text-align: center;height: 75px;width: 33%;position: relative;left: 68%;top: -52%;text-align: center;padding:22px;margin: 1px;}
+         .box_3{border: solid 1px #B8FFF9;text-align: center;height: 75px;width: 33%;position: relative;left: 34%;top: -103%;text-align: center;padding:22px;margin: 1px;}
+         .box_4{border: solid 1px #99FF7F;text-align: center;height: 75px;width: 33%;position: relative;top: -105%;text-align: center;padding:22px;margin: 1px;}
+         .box_5{border: solid 1px #C560C0;text-align: center;height: 75px;width: 33%;position: relative;top: -156%;left: 34%;text-align: center;padding:22px;margin: 1px;}
+         .box_6{border: solid 1px #66B9FF;text-align: center;height: 75px;width: 33%;position: relative;top: -207%;
+         	left:68%;padding:22px;margin: 1px; }
+         .box_1 a{text-decoration: none;color:black;}
+         .box_2 a{text-decoration: none;color:black;}
+         .box_3 a{text-decoration: none;color:black;}
+         .box_4 a{text-decoration: none;color:black;}
+         .box_5 a{text-decoration: none;color:black;}
+         .box_6 a{text-decoration: none;color:black;}
+         .lk{width: 300px;position: relative;left: 1005px;top: -800px;}
+         .wz ul{position: relative;left: -25px;}
+         /*article{border: solid 2px gray;}*/
+        /*旋转效果*/
+         .box_1 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_1 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_2 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_2 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_3 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_3 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_4 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_4 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_5 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_5 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_6 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_6 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+.glyphicon {
+  padding: 0px 10px;
+}
+pre{background-color:#F7F7CC;border: none; }
+.sm{margin-top: 15px;height: auto;background-color: #F0F0F0;border: solid 2px #F7F7CC;}
+.fx{height: auto;margin-top: 10px;}
+.xyp{height: auto;margin-top: 20px;}
+.xyp ul li a:hover{color: black;}
+.syp{height: auto;margin-top: 20px;}
+.syp ul li a:hover{color: black;}
+   </style>
+</head>
+<body>
+	<header>
+      <nav class="nav navbar-default" role="navigation">
+             <div class="top"></div>
+         <div class="container-fluid">
+         	<div class="navbar-header">
+                <a class="navbar-left" href="#"><img src="images/logo.png"></a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                  <span class="sr-only" >切换</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+         	</div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                 <li class="item"><a href="../index.html">首页</a></li>
+                 <li class="item active"><a href="../index_01.html">心情随笔</a></li>
+                 <li class="item"><a href="../index_02.html">韶华追忆</a></li>
+                 <li class="item"><a href="../index_03.html">技术分享</a></li>
+                 <li class="item"><a href="../index_04.html">学无止境</a></li>
+                 <li class="item"><a href="../index_05.html">关于我</a></li>
+              </ul>
+             <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                </div>
+                     <button type="submit" class="btn navbar-btn">搜索</button>
+             </form>
+
+           </div>
+         </div>
+      </nav>
+	</header>
+	<article>
+          <div class="r_box">
+               <div class="top_news ">
+                   <h3>
+                    <span ><b style="font-size: 16px">您现在的位置是：</b></span>
+                   	<span ><a href="../index.html" style="color: black">首页></a></span>
+                    <span ><a href="../index_02.html" style="color: black">韶华追忆>></a></span>
+                   </h3>
+                   <hr style="height: 0px;border: none;border-top: 4px ridge red;">
+               </div>
+                <div class="c">
+                  <ul>
+                     <li><h2 style="font-size: 20px;">祝我生日快乐</h2></li>
+                     <li class="glyphicon glyphicon-user">邵建欣</li>
+                     <li class="glyphicon glyphicon-calendar">2017-07-21 10:54:50</li>
+                     <li><p style="padding: 10px 0px">祝我生日快乐，祝我生日快乐哦！生日快乐歌唱完，该许愿啦！每年得六月二十八我都是在外面漂着，有多少年没在家过过生日了。爸妈总是说多想给你做一顿丰盛的生日餐，看着你吃就觉得幸福。可是这样的机会少之又少，突然就伤感的不行。</p></li>
+                    <li><p>昨天下班回家，路过天桥，看到有卖茉莉花的小摊，我就忍不住想买，就当给自己的生日礼物。我一路捧着，护着，生怕它被人碰了，折了。我仔细端详它翠绿的叶子，就如我刚来北京那会一样，浑身散发着年轻的活力。来京五年了，心似乎归于平静，将所有的事情看得特别淡，这似乎是好事又似乎不好，生活总是有两面性。</p></li>
+                    <li><p>昨天晚上先生说，要通宵改东西。我以后他又要加班整项目了，我玩了一会儿手机就睡着了。今天早上才知道他在给我准备特别大的惊喜，谢谢默默付出的你，谢谢一直以来包容我所有的一切。我愿每个生日都有你陪着，一直到白发苍苍。结婚快一年了，日子总是平平淡淡。我喜欢买花，你就放任不管，阳台堆满了一盆盆绿色的植物，连你喝茶的地方也霸占了，每天早上我都跑到阳台去看我的花，仿佛那便是我心里的所有。我不知如何表达我复杂的心情，写了十几年情话，关键时刻最浓重的情感却用言语无法表达，都搁在心里吧。</p></li>
+                    <li><p>清早，就收到果果，嫂子，掌门人的祝福和红包，收到了很多生日祝福，感谢身边出现的每个人。一直以来，我傲娇，我不可一世，我热爱自由，却有自己的条条框框，总是渴望去外面的世界看看，总是想把自己所有优势表现出来，可是我忘记了我原来是脆弱的，不堪一击的，人总是有两面性，带着坚强的面具示人，时间长了，自己就信以为真了。</p></li>
+                    <li><p>生日了，又长大一岁。不知该感慨呢，还是该苦笑呢。小时候总是盼着过生日，期望能吃到美味的奶油蛋糕。可是长大了，又害怕过生日，害怕年岁带来的各种压力。人总是在矛盾和无知中度过，再回首看这段日子，貌似以前的自己像另外一个人，而此时此刻的自己正接受新的挑战。加油吧，自己。</p></li>
+                     <li style="text-align: center;"><img width="650" height="264" src="images/hb.jpg"></li>
+                  </ul>
+               </div>
+               <div class="sm">
+                  <ul>
+                     <li>版权声明：本站原创文章，于2017-11-08，由<a>本人</a>发表</li>
+                     <li>转载请注明：<a href="#">重新解读常见的排序算法</a>|<a href="index.html">个人博客</a></li>
+                  </ul>
+               </div>
+               <div style="text-align: center;margin-top: 20px;" class="ds">
+                   <button style="border-radius: 20px; padding: 10px 40px;" class="btn btn-primary btn-lg " type="button">打赏</button>
+               </div>
+              <div class="fx">
+                      <ul class="list-inline">
+                          <li>分享:</li>
+                          <li><a href="#"><img style="width: 78px;height: 48px;" src="images/wx.gif"></a></li>
+                          <li><a href="#"><img style="width: 48px;height: 48px;" src="images/xl.jpg"></a></li>
+                          <li><a href="#"><img style="width: 78px;height: 48px;" src="images/qq.jpg"></a></li>
+                      </ul>
+              </div>
+              <div class="syp">
+                 <ul class="list-inline">
+                     <li><b>上一篇：</b></li>
+                     <li><a href="index_gn.html">我有那么一帮傻姑娘</a></li>
+                  </ul>
+              </div>
+              <div class="xyp">
+                  <ul class="list-inline">
+                     <li><b>下一篇：</b></li>
+                     <li><a href="#">其实我是个假程序员</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="r_box1">
+                <div class="box">
+                    <div class="box_1">
+                        <div><a href="#">关于博主</a></div>
+                    </div>
+                     <div class="box_2">
+                     	  <div><a href="#">心情随笔</a></div>
+                    </div>
+                     <div class="box_3">
+                     	  <div><a href="#">韶华追忆</a></div>
+                    </div>
+                     <div class="box_4">
+                     	  <div><a href="#">网站首页</a></div>
+                    </div>
+                     <div class="box_5">
+                     	  <div><a href="#">博客留言</a></div>
+                    </div>
+                     <div class="box_6">
+                     	  <div><a href="#">叶子书屋</a></div>
+                    </div>
+                </div>
+
+          </div>
+
+         <div class="lk">
+               <h3>最新文章</h3>
+               <hr>
+               <div class="wz">
+                   <ul>
+                      <li><a href="#">王先森生日快乐</a></li>
+                      <li><a href="#">不要把自己的苦难看得过于独特</a></li>
+                      <li><a href="#">曾梦想仗剑走天涯，后来因为bug太多就没去</a></li>
+                      <li><a href="#">天寒地冻，记得穿秋裤</a></li>
+                      <li><a href="#">我有那么一帮傻姑娘</a></li>
+                      <li><a href="#">php面试题总结（一）</a></li>
+                   </ul>
+
+               </div>
+               <div class="yqlk">
+                   <h3>友情链接</h3>
+                   <hr>
+                   <div class="lk1">
+                      <ul class="list-inline">
+                         <li><a href="#">zhjx922博客</a></li>
+                         <li><a href="#">PHP学习网</a></li>
+                         <li><a href="#">王志军博客</a></li>
+                      </ul>
+                      <ul class="list-inline">
+                         <li><a href="#">KTWO博客</a></li>
+                         <li><a href="#">80乐</a></li>
+                         <li><a href="#">张伟森博客</a></li>
+                         <li><a href="#">Leftso(左搜)</a></li>
+                         
+                      </ul>
+                        <ul class="list-inline">
+                        <li><a href="#">封尘博客</a></li>
+                        </ul>	
+                   </div>
+                
+               </div>
+           </div>
+
+	</article>
+	<footer>
+        <div class="end">
+           <ul>
+               <li><a href="#">Copyright © 2017</a></li>
+               <li><a href="#">www.yezismile.com All rights reserved. 京ICP备15029736号-1</a></li>
+           </ul>
+        </div>
+	</footer>
+	  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

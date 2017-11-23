@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+	<style type="text/css">
+
+         .container-fluid ul li{list-style: none;padding-left: 20px;}
+         .container-fluid ul li:hover{display: block;background-color: gray;}
+
+         .top{height: 1.2em;background-color: gray;}
+         .navbar-default .navbar-nav > li > a:hover
+       {
+          color: white;
+       }
+       .navbar-default .navbar-nav > li > a:focus {
+       	  color:blue;
+        }
+        .navbar-header a img{position: relative;left: 10px;top:10px;}
+        .navbar-nav li{position: relative;top: 8px;}
+        .carousel{position: relative;width: 28%;left: 10%;height: 250px;margin-top: 20px;}
+        .content{position: absolute;top: 16.2%;left: 38%;}
+        .text01{width: 35%;height: 130px;border: solid 1px #ccc;}
+        .text02{width: 35%;height: 120px;border: solid 1px #ccc;}
+        .r_box{position: absolute;top: 16.2%;left: 58%;}
+     /*   .guanzhu .img a img{width: 30%;height: 45%;position: relative;right: 5%;}*/
+       
+        .list li{list-style: none;}
+        .list-inline li a img{width:80px;height: 80px;}
+        .list-inline li a span{padding-left: 25px;padding-right: 1px;}
+        .list-inline li a{text-decoration: none;} 
+        .list-inline .yqlk .lk1 ul li a{text-decoration: none;}
+        .wz ul li a{text-decoration: none;}
+         hr{width: 1%;padding-right: 100%;}
+         h3{font-size: 15px;}
+         .lk1{background-color: white;}
+         body{background-color: #F1FAF9;}
+         .r_box_1{position:absolute;left: 10%;margin-top: 20px;}
+         .r_box_1 h3{font-weight: bold;}
+         .r_box_1 hr{height: 3px;border:none;border-top: 3px double red;width: 3px;}
+         figure a img{width: 30%;height: 50%;}
+         /*.c1 .image a img{} */
+         .r_box_1 .title{position: absolute;top: 80px;left: 220px;}
+         .r_box_1 .title ul li a{color: black;font-size: 15px;}
+         .r_box_1{width: 575px;height: 207px;}
+         .c1{ margin-bottom: 40px;height: 55%;}
+         .title ul {position: relative;top: -16px;left: -70px;}
+         .title1{position: relative;top:-132px;margin-left: 25%;}
+         .title2{position: relative;top:-142px;margin-left: 25%;}
+         .title3{position: relative;top:-128px;margin-left: 25%;}
+         .title4{position: relative;top:-120px;margin-left: 25%;}
+         .title5{position: relative;top:-130px;margin-left: 25%;}
+         .yr{width: 30%;height:100px;}
+         .people{width: 30%;height:110px;}
+         footer .end{height: 50px;background-color: black;position: relative;top: 2400px;}
+         .end ul li{list-style: none;}
+         .end ul li a{text-decoration: none;color: white;}
+         .end {text-align: center;}
+         .navbar-default{background-color: #D8D8D8;}
+         .sb{padding-left: 10px;}
+         .r_box{width: 800px;height: 800px;position: relative;left: 13%;}
+         .sy{position: relative;left: 89%;}
+         .sy a{color: gray;text-decoration: none;}
+         .sb{position: relative;left:-12%;}
+         .c{height: 140px;margin-top: 10px;border-radius: 4px;background-color: #F7F7CC;}
+         .c ul li{list-style: none;} 
+         .c ul .data {padding-top: 25px;}
+         .r_box{margin-top: 20px;}
+         .r_box1{height: 200px;  position: relative;top: -10%;width: 25%;left:1005px;top: -820px;}
+         .box{height: 150px;position: relative;top: 50px;}
+         .box_1{border: solid 1px #FFDBA8;text-align: center;height: 75px;width: 33%;text-align: center;padding:22px;margin: 1px;}
+         .box_2{border: solid 1px #FFEF71;text-align: center;height: 75px;width: 33%;position: relative;left: 68%;top: -52%;text-align: center;padding:22px;margin: 1px;}
+         .box_3{border: solid 1px #B8FFF9;text-align: center;height: 75px;width: 33%;position: relative;left: 34%;top: -103%;text-align: center;padding:22px;margin: 1px;}
+         .box_4{border: solid 1px #99FF7F;text-align: center;height: 75px;width: 33%;position: relative;top: -105%;text-align: center;padding:22px;margin: 1px;}
+         .box_5{border: solid 1px #C560C0;text-align: center;height: 75px;width: 33%;position: relative;top: -156%;left: 34%;text-align: center;padding:22px;margin: 1px;}
+         .box_6{border: solid 1px #66B9FF;text-align: center;height: 75px;width: 33%;position: relative;top: -207%;
+         	left:68%;padding:22px;margin: 1px; }
+         .box_1 a{text-decoration: none;color:black;}
+         .box_1 a:hover{}
+         .box_2 a{text-decoration: none;color:black;}
+         .box_3 a{text-decoration: none;color:black;}
+         .box_4 a{text-decoration: none;color:black;}
+         .box_5 a{text-decoration: none;color:black;}
+         .box_6 a{text-decoration: none;color:black;}
+         .lk{width: 300px;position: relative;left: 1005px;top: -800px;}
+         .wz ul{position: relative;left: -25px;}
+         /*article{border: solid 2px gray;}*/
+        /*旋转效果*/
+         .box_1 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_1 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_2 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_2 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .box_3 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_3 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_4 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_4 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_5 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_5 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         .box_6 div{
+         	-webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;}
+         .box_6 div:hover{
+         	 -webkit-transform: rotate(360deg);
+         -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+          .a{
+           
+             height: 200px;
+            }
+         .c:hover{background-color: white;}
+         .t {padding-top: 10px;}
+         .a .c a img{width: 167px;height: 137px;}
+         .c .ul-1{position: relative;left: 160px;width: 80%;top: -140px;}
+         .t a{color: black;font-weight: bold;}
+         .c .ul-1 li p{margin-top: 20px;}
+         .pg{position: relative;top: 2350px;height: 50px;}
+         .pg span{position: relative;left: 290px;top: 25px;}
+         /*vue框架的分页样式*/
+           .pageination_align {
+            text-align: center
+        }
+
+        .pageination {
+            color: #48576a;
+            font-size: 12px;
+            display: inline-block;
+            user-select: none;
+
+        }
+
+        .pagination_page {
+            padding: 0 4px;
+            border: 1px solid #d1dbe5;
+            border-right: 0;
+            background: #fff;
+            font-size: 13px;
+            min-width: 28px;
+            height: 28px;
+            line-height: 28px;
+            cursor: pointer;
+            box-sizing: border-box;
+            text-align: center;
+            float: left;
+        }
+
+        .pagination_page_right {
+            border-right: 1px solid #d1dbe5;
+        }
+
+        .pagination_page:hover {
+            color: white;
+            background-color: #20a0ff;
+        }
+
+        .disabled {
+            color: #e4e4e4 !important;
+            background-color: #fff;
+            cursor: not-allowed;
+        }
+
+        .pagination_page_active {
+            border-color: #20a0ff;
+            background-color: #20a0ff;
+            color: #fff !important;;
+            cursor: default;
+        }
+   </style>
+</head>
+<body>
+	<header>
+      <nav class="nav navbar-default" role="navigation">
+             <div class="top"></div>
+         <div class="container-fluid">
+         	<div class="navbar-header">
+                <a class="navbar-left" href="#"><img src="images/logo.png"></a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                  <span class="sr-only" >切换</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+         	</div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                 <li class="item"><a href="index.html">首页</a></li>
+                 <li class="item "><a href="index_01.html">心情随笔</a></li>
+                 <li class="item"><a href="index_02.html">韶华追忆</a></li>
+                 <li class="item active"><a href="index_03.html">技术分享</a></li>
+                 <li class="item"><a href="index_04.html">学无止境</a></li>
+                 <li class="item"><a href="index_05.html">关于我</a></li>
+              </ul>
+             <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                </div>
+                     <button type="submit" class="btn navbar-btn">搜索</button>
+             </form>
+
+           </div>
+         </div>
+      </nav>
+	</header>
+	<article>
+          <div class="r_box">
+               <div class="top_news ">
+                   <h3>
+                   	<span class="sy"><a href="index.html">返回首页>>></a></span>
+                   	<span class="sb"><b>技术分享</b></span>
+                   </h3>
+                   <hr style="height: 0px;border: none;border-top: 4px ridge red;">
+               </div>
+                    <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_px.html"><img src="images/01-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_px.html">重新解读常见的排序算法</a></li>
+                     <li><p>冒泡排序：最简单的一种算法，如果第一次接触程序的同学，就会有一些疑惑，为什么那么写。我举例子说明一下：就比如你有两个瓶子，分别是A瓶，B瓶，瓶子里都装满了水，你想把这AB两瓶水做一个交换，在生活中，你一定会找来第三个... </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+             <!--    <div class="title">
+                <ul>
+                    <h3><a href="#">重新解读常见的排序算法</a></h3>
+                      <p>冒泡排序：最简单的一种算法，如果第一次接触程序的同学，就会有一些疑惑，为什么那么写。我举例子说明一下：就比如你有两个瓶子，分别是A瓶，B瓶，瓶子里都装满了水，你想把这AB两瓶水做一个交换，在生活中，你一定会找来第三个... </p>
+                </ul>
+               </div> -->
+              <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_php.html"><img src="images/08.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_php.html">php面试题总结（一）</a></li>
+                     <li><p>1. 魔术函数有哪些,分别在什么时候调用? __construct()，类的构造函数 __destruct()，类的析构函数 __call()，在对象中调用一个不可访问方法时调用 __cal... </p></li>
+                  </ul>
+               </div>
+             </div>
+                <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+               <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_zz.html"><img src="images/08.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_zz.html">正则表达式的基础用法</a></li>
+                     <li><p>在php中会经常使用到正则，经常会因为正则的反斜杠整懵逼。前一段时间，正好项目中用到正则，虽然研究的不深，但日常简单的正则表达式也足够用了。就拿工作中一个案例来讲吧。需要匹配两个#之间的内容。不同的工程师有不同的写法...  </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                  <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_pl.html"><img src="images/13-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_pl.html">叶子飘落的小插件分享</a></li>
+                     <li><p>之前有博友说，喜欢首页那个叶子落的效果，今天就把那个小插件分享出去。分享地址是在github上呢，可以自己下载应用到自己的网站上。代码很简单，没几行，图片的地址也可以设置。喜欢就去下载吧！ $(documen...  </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                    <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_pl.html"><img src="images/08.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_pl.html">preg_replace_callback遇到的问题</a></li>
+                     <li><p>中午的时候，碰到preg_replace_callback回调的问题，测试机没有问题，线上却报语法错误，最初的写法如下，初步判断支持5.2以上的版本，可惜版本服务器是5.2，不能使用，坑。 $str = preg...  </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                    <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_vag.html"><img src="images/14-.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_vag.html">vagrant环境问题的记录</a></li>
+                     <li><p>问题一 vagrant up启动不起来 1 vagrant启动不起来，会报错。如图所示，起初以为是ssh的问题。找了一圈。 2 但是即使报错，除了无法映射本地文件，还是可以在xshell 连上服... </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                     <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_xz.html"><img src="images/08.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_xz.html">上传图片旋转问题</a></li>
+                     <li><p>手机上查看图片的时候，会出现图片倒过来的情况，对用户体验超级不好。所以我们需要根据图片的需要，对图片进行旋转的操作。以下代码，是个小demo，在使用的时候，要确定php环境是否开启exif扩展，以下代码需要依赖exi... </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                    <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_ewm.html"><img src="images/08.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_ewm.html">phpqrcode生成二维码</a></li>
+                     <li><p>1、概念 QR Code码，是由Denso公司于1994年9月研制的一种矩阵二维码符号，它具有一维条码及其它二维条码所具有的信息容量大、可靠性高、可表示汉字及图象多种文字信息、保密防伪性强等优点。 2、... </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                    <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_data.html"><img src="images/15-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_data.html">模拟朋友圈数据存储原理</a></li>
+                     <li><p>【引言】 首先说一下问题的出处：公司某个项目组有一个需求，获取所有关注人的文章列表。乍一看，感觉貌似挺简单，那就获取吧，通过uid获取所有关注人的uid数据集合，然后通过对应的uid，获取文章id不就可以了吗。...  </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                   <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_x7.html"><img src="images/16-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_x7.html">七牛上传分享</a></li>
+                     <li><p>侯哥写得七牛上传，在这里分享一下。 <?php /** * * @author hou.yongxu * @date 2016/6/20 */ Yii::import('application.e... </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                    <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_php_f.html"><img src="images/08.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_php_f.html">php工厂模式</a></li>
+                     <li><p>最近在学习设计模式，如下例子，就是简单的工厂模式，初次写，就把代码贴出来分享一下。 class Operation{ private $numberA = 0; private $numberB = ...   </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                  <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_ue.html"><img src="images/17-.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_ue.html">ueditor 基本配置</a></li>
+                     <li><p>基本配置 版本号：1.4.3.3 编码:utf-8 官方文档：http://fex.baidu.com/ueditor/ 从官网下载最新utf8的代码。目录文件如下 引入编辑器 在页面...  </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                  <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_DB.html"><img src="images/08.png"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_DB.html">DB类基本操作</a></li>
+                     <li><p>[注明：]闲暇时写的一个DB类，主要是最基础的CURD操作，还可以自行做一些扩展。我只写得是一些基本的用法，封装一些常用的方法，逻辑性比较强的业务还得在日后练习中加强。下面的方法，我已作相应的测试。 db.co... </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                   <div class="a"> 
+                    <div class="c">
+                      <a href="./jishu_share/index_js.html"><img src="images/18-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="./jishu_share/index_js.html">js的函数类库</a></li>
+                     <li><p>项目中常用到的一些javascript、jquery方法写成相关的方法，便于日后调用。前几天总结了一些，感觉很多知识要是不用就会彻底忘掉，所以人们常说的量变到一定程度会质变是有道理。言归正传，上函数啦. (一)...  </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+                    <div class="a"> 
+                    <div class="c">
+                      <a><img src="images/19-.jpg"></a>
+                    <ul class="ul-1">
+                     <li class="t"><a href="#">我有一个想法</a></li>
+                     <li><p>我有一个想法，但就是缺一个程序员。我去年买了一个表，听到无数挂着产品经理的名号说这句话的时候，我特别想把他打得头破血流住医院，原谅我这么暴力。迄今为止，我特别纳闷一件事，所谓的产品经理到底是学什么专业出身的，莫名其妙...  </p></li>
+                  </ul>
+               </div>
+             </div>
+               <hr style="height:0px;border:none;border-top:2px ridge green;"/>
+             
+          </div>
+          <div class="r_box1">
+                <div class="box">
+                    <div class="box_1">
+                        <div><a href="#">关于博主</a></div>
+                    </div>
+                     <div class="box_2">
+                     	  <div><a href="#">心情随笔</a></div>
+                    </div>
+                     <div class="box_3">
+                     	  <div><a href="#">韶华追忆</a></div>
+                    </div>
+                     <div class="box_4">
+                     	  <div><a href="#">网站首页</a></div>
+                    </div>
+                     <div class="box_5">
+                     	  <div><a href="#">博客留言</a></div>
+                    </div>
+                     <div class="box_6">
+                     	  <div><a href="#">叶子书屋</a></div>
+                    </div>
+                </div>
+          </div>
+         <div class="lk">
+               <h3>最新文章</h3>
+               <hr>
+               <div class="wz">
+                   <ul>
+                      <li><a href="#">王先森生日快乐</a></li>
+                      <li><a href="#">不要把自己的苦难看得过于独特</a></li>
+                      <li><a href="#">曾梦想仗剑走天涯，后来因为bug太多就没去</a></li>
+                      <li><a href="#">天寒地冻，记得穿秋裤</a></li>
+                      <li><a href="#">我有那么一帮傻姑娘</a></li>
+                      <li><a href="#">php面试题总结（一）</a></li>
+                   </ul>
+
+               </div>
+               <div class="yqlk">
+                   <h3>友情链接</h3>
+                   <hr>
+                   <div class="lk1">
+                      <ul class="list-inline">
+                         <li><a href="#">zhjx922博客</a></li>
+                         <li><a href="#">PHP学习网</a></li>
+                         <li><a href="#">王志军博客</a></li>
+                      </ul>
+                      <ul class="list-inline">
+                         <li><a href="#">KTWO博客</a></li>
+                         <li><a href="#">80乐</a></li>
+                         <li><a href="#">张伟森博客</a></li>
+                         <li><a href="#">Leftso(左搜)</a></li>
+                         
+                      </ul>
+                        <ul class="list-inline">
+                        <li><a href="#">封尘博客</a></li>
+                        </ul>	
+
+                   </div>
+               </div>
+           </div>
+        <div class="pg">
+            <span>每页15条记录/共32条</span>
+           <pageination :total="model.total" :size="model.size" :page="model.page" :changge="pageFn" ></pageination>
+    </div>
+	</article>
+	<footer>
+        <div class="end">
+           <ul>
+               <li><a href="#">Copyright © 2017</a></li>
+               <li><a href="#">www.yezismile.com All rights reserved. 京ICP备15029736号-1</a></li>
+           </ul>
+        </div>
+	</footer>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/pageination.js"></script>
+    <script>
+  window.onload=function () {
+      var app = new Vue({
+          el: '.pg',
+          data() {
+              return {
+                  model:{
+                      total:32,//总页数
+                      size:15,//每页显示条目个数不传默认10
+                      page:1,//当前页码
+                  }
+              }
+          },
+          methods:{
+              //页码切换执行方法
+              pageFn(val){
+                  this.model.page=val;
+                  console.log(val);
+              }
+          }
+      })
+  }
+
+
+</script>
+</body>
+</html>
